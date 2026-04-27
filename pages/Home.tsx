@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { PARTNERS } from '../constants';
+import { asset } from '../utils/asset';
 import Transition from '../components/Transition';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
@@ -74,7 +75,7 @@ const Home: React.FC = () => {
                }} />
              </div>
              <img
-              src="/img-sfondo.webp"
+              src={asset("img-sfondo.webp")}
               className="w-full h-full object-cover opacity-80"
               alt="Green Mecc Background"
              />

@@ -73,7 +73,7 @@ const About: React.FC = () => {
               >
                 <div className="relative aspect-video rounded-3xl overflow-hidden border border-stone-300 dark:border-white/10 shadow-2xl shadow-green-900/20">
                   <img
-                    src="/img-sfondo.webp"
+                    src={dept.image}
                     alt={dept.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
@@ -87,7 +87,7 @@ const About: React.FC = () => {
                     to={`/about/${dept.id}`}
                     className="group/link flex items-start gap-3 mb-6 w-full min-w-0"
                   >
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display font-black text-transparent bg-clip-text bg-gradient-to-b from-stone-900 to-stone-600 dark:from-white dark:to-gray-600 group-hover/link:from-emerald-900 group-hover/link:to-emerald-700 leading-none pb-2 transition-all duration-300 min-w-0">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-display font-black text-transparent bg-clip-text bg-gradient-to-b from-stone-900 to-stone-600 dark:from-white dark:to-gray-600 group-hover/link:from-emerald-900 group-hover/link:to-emerald-700 leading-tight py-1 transition-all duration-300 min-w-0">
                       {dept.title.toUpperCase()}
                     </h2>
                     <ArrowUpRight
