@@ -4,6 +4,7 @@ import { DEPARTMENTS_INFO } from '../constants';
 import { Reveal } from '../components/ui/Reveal';
 import Transition from '../components/Transition';
 import { ArrowUpRight } from 'lucide-react';
+import { asset } from '../utils/asset';
 
 const Team: React.FC = () => {
   return (
@@ -93,7 +94,7 @@ const Team: React.FC = () => {
             {/* Image Side */}
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-stone-300 dark:border-white/10 shadow-2xl shadow-green-900/20">
               <img
-                src={DEPARTMENTS_INFO[0].image}
+                src={asset("T0-Albo.jpg")}
                 alt="Albo Green Mecc"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />

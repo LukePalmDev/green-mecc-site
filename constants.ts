@@ -71,7 +71,7 @@ export const VEHICLES: Vehicle[] = [
     id: "asteria",
     name: "Asteria",
     year: "2022",
-    image: asset("vehicles/Asteria1.webp"),
+    image: asset("vehicles/M6-Asteria.webp"),
     description: [
       "Battery electric powered urban concept vehicle.",
       "Optimized chassis to minimize mass and maximize structural stiffness.",
@@ -83,7 +83,7 @@ export const VEHICLES: Vehicle[] = [
     id: "leto",
     name: "Leto",
     year: "2019",
-    image: asset("vehicles/Leto1.webp"),
+    image: asset("vehicles/M5-Leto.webp"),
     description: [
       "Urban Concept battery electric category.",
       "CFRP structure designed for stiffness and aerodynamics.",
@@ -94,7 +94,7 @@ export const VEHICLES: Vehicle[] = [
     id: "daphne",
     name: "Daphne",
     year: "2011",
-    image: asset("vehicles/Daphne1.webp"),
+    image: asset("vehicles/M4-Daphne.webp"),
     description: [
       "Urban Concept category.",
       "CFRP monocoque.",
@@ -106,7 +106,7 @@ export const VEHICLES: Vehicle[] = [
     id: "apollo",
     name: "Apollo",
     year: "2010",
-    image: asset("vehicles/Apollo1.webp"),
+    image: asset("vehicles/M3-Apollo.webp"),
     description: [
       "Powered by solar energy.",
       "Photovoltaic cell system installed on a wing body.",
@@ -118,7 +118,7 @@ export const VEHICLES: Vehicle[] = [
     id: "artemide",
     name: "Artemide",
     year: "2009",
-    image: asset("vehicles/Artemide1.webp"),
+    image: asset("vehicles/M2-Artemide.webp"),
     description: [
       "Powered by hydrogen fuel cell.",
       "Italian record for fuel cell prototypes (2741 km/l).",
@@ -129,7 +129,7 @@ export const VEHICLES: Vehicle[] = [
     id: "whynot",
     name: "Why Not?",
     year: "2005",
-    image: asset("vehicles/Whynot1.webp"),
+    image: asset("vehicles/M1-Why Not?.webp"),
     description: [
       "First Shell Eco-marathon vehicle by PoliMi.",
       "Trellis frame with aluminum tubes.",
@@ -147,7 +147,7 @@ export const RESULTS: Result[] = [
     vehicle: "Asteria",
     category: "Urban concept, battery electric",
     result: "3rd place at the Mileage Challenge with 230 km/kWh and 2nd place at Driver's Championship",
-    image: asset("result/2024.webp")
+    image: asset("result/R5-2024.webp")
   },
   {
     year: "2023",
@@ -156,7 +156,7 @@ export const RESULTS: Result[] = [
     vehicle: "Asteria",
     category: "Urban concept, battery electric",
     result: "4th place with 202 km/kWh",
-    image: asset("result/2023.webp")
+    image: asset("result/R4-2023.webp")
   },
   {
     year: "2022",
@@ -165,7 +165,7 @@ export const RESULTS: Result[] = [
     vehicle: "Asteria",
     category: "Urban concept, battery electric",
     result: "5th place with 230 km/kWh",
-    image: asset("result/2022.webp")
+    image: asset("result/R3-2022.webp")
   },
   {
     year: "2011",
@@ -174,7 +174,7 @@ export const RESULTS: Result[] = [
     vehicle: "Apollo",
     category: "Prototype, solar",
     result: "1st place and WORLD RECORD (1108 km/kWh)",
-    image: asset("result/2011_GER_WR.webp")
+    image: asset("result/R2-2011.webp")
   },
   {
     year: "2010",
@@ -183,7 +183,7 @@ export const RESULTS: Result[] = [
     vehicle: "Apollo",
     category: "Prototype, solar",
     result: "1st place",
-    image: asset("result/2010_USA.webp")
+    image: asset("result/R1-2010.webp")
   }
 ];
 
@@ -213,49 +213,49 @@ export const DEPARTMENTS_INFO: DepartmentInfo[] = [
     id: "supervisor",
     title: "Academic Supervisor",
     icon: asset("departments/structure.svg"),
-    image: asset("img-aboutus.jpg"),
+    image: asset("T7-ACADEMIC SUPERVISOR.jpg"),
     description: "Provides institutional guidance and academic oversight, linking the team with the university's research goals and ensuring alignment with educational objectives."
   },
   {
     id: "management",
     title: "Management",
     icon: asset("departments/management-3.svg"),
-    image: asset("mission/mission1.jpg"),
+    image: asset("mission/T6-MANAGEMENT.jpg"),
     description: "The main task is to manage and coordinate the work of all team members. Every year, the seasonal objectives are established, and the team is formed. Experience gained over many seasons is the basis for success."
   },
   {
     id: "chassis",
     title: "Chassis & Subsystem",
     icon: asset("departments/chassis.svg"),
-    image: asset("mission/mission2.JPG"),
+    image: asset("mission/T5-CHASSIS & SUBSYSTEM.jpg"),
     description: "Responsible for designing, manufacturing, and assembling the chassis and subsystems. The design process utilizes advanced CAD software and Finite Element simulations (FEM). Experts in composite materials processing."
   },
   {
     id: "drivetrain",
     title: "Drivetrain",
     icon: asset("departments/engineering.svg"),
-    image: asset("mission/mission3.jpg"),
+    image: asset("mission/T4-DRIVETRAIN.jpg"),
     description: "Responsible for the design of the vehicle's drivetrain. The main working areas involve the electric motors, the custom transmission system, and the high-efficiency wheel hubs."
   },
   {
     id: "electronics",
     title: "Strategy & Electronics",
     icon: asset("departments/circuit.svg"),
-    image: asset("mission/mission4.jpg"),
+    image: asset("mission/T3-STRATEGY & ELECTRONICS.jpg"),
     description: "Develops a reliable and efficient electrical system. Accurate numerical models are created to simulate vehicle behavior and optimize race strategy. On-track tests validate these models."
   },
   {
     id: "aerodynamics",
     title: "Aerodynamics",
     icon: asset("departments/aerodynamic.svg"),
-    image: asset("mission/mission5.jpg"),
+    image: asset("mission/T2-AERODYNAMICS.jpg"),
     description: "Responsible for defining the external shape of the vehicle body to optimize aerodynamic efficiency. Fluid dynamic analyses are carried out using advanced CFD simulations."
   },
   {
     id: "communication",
     title: "Communication",
     icon: asset("departments/bullhorn-2.svg"),
-    image: asset("img-sfondo.webp"),
+    image: asset("Sfondo.webp"),
     description: "Manages social media, the website, and PR. A communication plan is defined to narrate the team's journey to the Shell Eco-marathon, engaging sponsors and the public."
   }
 ];

@@ -76,7 +76,7 @@ const Home: React.FC = () => {
                }} />
              </div>
              <img
-              src={asset("img-sfondo.webp")}
+              src={asset("Sfondo.webp")}
               className="w-full h-full object-cover opacity-80 dark:opacity-60"
               alt="Green Mecc Background"
              />
