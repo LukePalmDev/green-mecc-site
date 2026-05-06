@@ -27,9 +27,11 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 bg-noise opacity-[0.05] pointer-events-none z-50 mix-blend-overlay"></div>
 
         {/* MASSIVE TEXT LAYER BEHIND */}
-        <div className="relative z-10 flex flex-col items-center justify-center leading-none select-none -translate-y-[8vh]">
+        <motion.div
+          style={{ y: yText }}
+          className="relative z-10 flex flex-col items-center justify-center leading-none select-none -translate-y-[8vh]"
+        >
            <motion.h1
-              style={{ y: yText }}
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1.2, delay: 0.5, ease: [0.76, 0, 0.24, 1] }}
@@ -38,7 +40,6 @@ const Home: React.FC = () => {
               GREEN
            </motion.h1>
            <motion.h1
-              style={{ y: useTransform(scrollYProgress, [0, 1], [0, 200]) }}
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1.2, delay: 0.6, ease: [0.76, 0, 0.24, 1] }}
@@ -46,7 +47,7 @@ const Home: React.FC = () => {
            >
               MECC
            </motion.h1>
-        </div>
+        </motion.div>
 
         {/* CENTRAL IMAGE - DANDELION / NATURE */}
         <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
