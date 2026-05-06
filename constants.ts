@@ -255,7 +255,7 @@ export const DEPARTMENTS_INFO: DepartmentInfo[] = [
     id: "communication",
     title: "Communication",
     icon: asset("departments/bullhorn-2.svg"),
-    image: asset("Sfondo.webp"),
+    image: asset("T1-COMMUNICATION.webp"),
     description: "Manages social media, the website, and PR. A communication plan is defined to narrate the team's journey to the Shell Eco-marathon, engaging sponsors and the public."
   }
 ];
