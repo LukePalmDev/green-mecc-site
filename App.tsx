@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Navbar from './components/Navbar';
@@ -60,6 +60,32 @@ const SmoothScroll = () => {
     return null;
 }
 
+// Scroll Progress Indicator
+const ScrollProgress = () => {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(docHeight > 0 ? scrollTop / docHeight : 0);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <div className="fixed right-0 top-0 w-[3px] h-screen z-[150] pointer-events-none">
+      <div className="w-full h-full bg-stone-200/30 dark:bg-white/10" />
+      <motion.div
+        className="absolute top-0 left-0 w-full bg-emerald-900"
+        style={{ height: `${progress * 100}%` }}
+        transition={{ type: 'tween', duration: 0 }}
+      />
+    </div>
+  );
+};
+
 // Animated Routes Wrapper
 const AnimatedRoutes = () => {
     const location = useLocation();
@@ -85,6 +111,7 @@ const App: React.FC = () => {
       <Router>
         <ScrollToTop />
         <SmoothScroll />
+        <ScrollProgress />
         <div className="font-sans antialiased text-stone-900 dark:text-gray-100 bg-white dark:bg-stone-950 min-h-screen flex flex-col selection:bg-emerald-900 selection:text-white transition-colors duration-300">
           <Navbar />
           <main className="flex-grow relative">
