@@ -68,15 +68,15 @@ const Home: React.FC = () => {
              </div>
              {/* Gradient overlays for smooth fade to background - Dark mode */}
              <div className="absolute inset-0 z-10 hidden dark:block">
-               <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-stone-950" />
-               <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-transparent to-stone-950" />
+               <div className="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-transparent to-stone-950/60" />
+               <div className="absolute inset-0 bg-gradient-to-r from-stone-950/60 via-transparent to-stone-950/60" />
                <div className="absolute inset-0" style={{
-                 background: 'radial-gradient(ellipse at center, transparent 0%, transparent 45%, rgba(12, 10, 9, 0.6) 70%, rgb(12, 10, 9) 100%)'
+                 background: 'radial-gradient(ellipse at center, transparent 0%, transparent 45%, rgba(12, 10, 9, 0.3) 70%, rgba(12, 10, 9, 0.7) 100%)'
                }} />
              </div>
              <img
               src={asset("img-sfondo.webp")}
-              className="w-full h-full object-cover opacity-80"
+              className="w-full h-full object-cover opacity-80 dark:opacity-60"
               alt="Green Mecc Background"
              />
           </motion.div>
