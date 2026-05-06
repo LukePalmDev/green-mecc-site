@@ -5,6 +5,7 @@ import { Reveal } from '../components/ui/Reveal';
 import Transition from '../components/Transition';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Mail, Linkedin } from 'lucide-react';
+import { TeamMember } from '../types';
 
 // Mappa gli id dei DEPARTMENTS_INFO ai titoli in TEAM_STRUCTURE
 const GROUP_ID_TO_TEAM: Record<string, string> = {
@@ -44,15 +45,13 @@ const TeamGroup: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6">
 
           {/* Back Button */}
-          <Reveal>
-            <Link
-              to="/about"
-              className="inline-flex items-center gap-2 text-emerald-900 font-mono text-xs uppercase tracking-widest mb-16 hover:gap-4 transition-all duration-300"
-            >
-              <ArrowLeft size={14} />
-              Back to About
-            </Link>
-          </Reveal>
+          <Link
+            to="/team"
+            className="inline-flex items-center gap-2 text-emerald-900 font-mono text-xs uppercase tracking-widest mb-16 hover:gap-4 transition-all duration-300"
+          >
+            <ArrowLeft size={14} />
+            Back to Team
+          </Link>
 
           {/* Header */}
           <div className="mb-20">
@@ -61,64 +60,77 @@ const TeamGroup: React.FC = () => {
                 {department.title.toUpperCase()}
               </h1>
             </Reveal>
-            <Reveal delay={0.2}>
-              <p className="text-xl text-emerald-900 font-mono border-l-4 border-emerald-900 pl-4 max-w-xl">
-                {department.description}
-              </p>
-            </Reveal>
+            <p className="text-xl text-emerald-900 font-mono border-l-4 border-emerald-900 pl-4 max-w-xl">
+              {department.description}
+            </p>
           </div>
 
-          {/* Members Grid */}
-          {teamDept && teamDept.members.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {teamDept.members.map((member, memberIndex) => (
-                <Reveal key={memberIndex} delay={memberIndex * 0.08}>
-                  <motion.div
-                    whileHover={{ y: -10 }}
-                    className="group relative bg-stone-200 dark:bg-black/40 rounded-xl overflow-hidden"
-                  >
-                    <div className="aspect-[4/3] overflow-hidden relative">
-                      <img
-                        src={member.image}
-                        alt={`${member.name} ${member.surname}`}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
-                      />
-                      {/* Overlay Links */}
-                      <div className="absolute inset-0 bg-green-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                        {member.email && (
-                          <a
-                            href={`mailto:${member.email}`}
-                            className="p-2 bg-white rounded-full text-green-900 hover:scale-110 transition-transform"
-                          >
-                            <Mail size={20} />
-                          </a>
-                        )}
-                        <a href="#" className="p-2 bg-white rounded-full text-green-900 hover:scale-110 transition-transform">
-                          <Linkedin size={20} />
-                        </a>
-                      </div>
+          {/* Members Grid — split capi reparto e altri */}
+          {teamDept && teamDept.members.length > 0 ? (() => {
+            const capi = teamDept.members.filter(m => m.role === 'Capo Reparto');
+            const altri = teamDept.members.filter(m => m.role !== 'Capo Reparto');
+            const renderCard = (member: TeamMember, i: number) => (
+              <motion.div
+                key={i}
+                whileHover={{ y: -10 }}
+                className="group relative bg-stone-200 dark:bg-black/40 rounded-xl overflow-hidden"
+              >
+                <div className="aspect-[4/3] overflow-hidden relative">
+                  <img
+                    src={member.image}
+                    alt={`${member.name} ${member.surname}`}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                  />
+                  <div className="absolute inset-0 bg-green-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                    {member.email && (
+                      <a href={`mailto:${member.email}`} className="p-2 bg-white rounded-full text-green-900 hover:scale-110 transition-transform">
+                        <Mail size={20} />
+                      </a>
+                    )}
+                    <a href="#" className="p-2 bg-white rounded-full text-green-900 hover:scale-110 transition-transform">
+                      <Linkedin size={20} />
+                    </a>
+                  </div>
+                </div>
+                <div className="p-4 border-t border-stone-300 dark:border-white/10">
+                  <h4 className="font-display font-bold text-lg text-stone-900 dark:text-white uppercase">{member.surname}</h4>
+                  <p className="text-stone-600 dark:text-gray-400 font-light">{member.name}</p>
+                  {member.role && member.role !== 'Capo Reparto' && (
+                    <p className="text-emerald-900 text-xs uppercase tracking-widest mt-2 font-bold">{member.role}</p>
+                  )}
+                </div>
+              </motion.div>
+            );
+            return (
+              <>
+                {capi.length > 0 && (
+                  <div className="mb-12">
+                    <p className="text-emerald-900 font-mono text-xs uppercase tracking-[0.3em] mb-6 border-b border-emerald-900/20 pb-3">
+                      Capo Reparto
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                      {capi.map(renderCard)}
                     </div>
-                    <div className="p-4 border-t border-stone-300 dark:border-white/10">
-                      <h4 className="font-display font-bold text-lg text-stone-900 dark:text-white uppercase">
-                        {member.surname}
-                      </h4>
-                      <p className="text-stone-600 dark:text-gray-400 font-light">{member.name}</p>
-                      {member.role && (
-                        <p className="text-emerald-900 text-xs uppercase tracking-widest mt-2 font-bold">
-                          {member.role}
-                        </p>
-                      )}
+                  </div>
+                )}
+                {altri.length > 0 && (
+                  <div>
+                    {capi.length > 0 && (
+                      <p className="text-stone-500 dark:text-gray-500 font-mono text-xs uppercase tracking-[0.3em] mb-6 border-b border-stone-200 dark:border-white/10 pb-3">
+                        Membri
+                      </p>
+                    )}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                      {altri.map(renderCard)}
                     </div>
-                  </motion.div>
-                </Reveal>
-              ))}
-            </div>
-          ) : (
-            <Reveal>
-              <p className="text-stone-600 dark:text-gray-400 text-xl font-light">
-                Members information coming soon.
-              </p>
-            </Reveal>
+                  </div>
+                )}
+              </>
+            );
+          })() : (
+            <p className="text-stone-600 dark:text-gray-400 text-xl font-light">
+              Members information coming soon.
+            </p>
           )}
 
         </div>

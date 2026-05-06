@@ -13,8 +13,8 @@ export const TEAM_STRUCTURE: Department[] = [
   {
     title: "Chassis & Subsystem",
     members: [
-      { name: "Stefano", surname: "Chiarito", image: PLACEHOLDER_PERSON },
-      { name: "Giacomo Giovanni", surname: "Moroni", image: PLACEHOLDER_PERSON },
+      { name: "Stefano", surname: "Chiarito", role: "Capo Reparto", image: PLACEHOLDER_PERSON },
+      { name: "Giacomo Giovanni", surname: "Moroni", role: "Capo Reparto", image: PLACEHOLDER_PERSON },
       { name: "Leonardo", surname: "Nava", image: PLACEHOLDER_PERSON },
       { name: "Carola", surname: "Bragotto", image: PLACEHOLDER_PERSON },
       { name: "Simone", surname: "Viterale", image: PLACEHOLDER_PERSON },
@@ -27,8 +27,8 @@ export const TEAM_STRUCTURE: Department[] = [
   {
     title: "Drivetrain",
     members: [
-      { name: "Giacomo", surname: "Bertocchi", image: PLACEHOLDER_PERSON },
-      { name: "Leonardo", surname: "Mattiuzzi", image: PLACEHOLDER_PERSON },
+      { name: "Giacomo", surname: "Bertocchi", role: "Capo Reparto", image: PLACEHOLDER_PERSON },
+      { name: "Leonardo", surname: "Mattiuzzi", role: "Capo Reparto", image: PLACEHOLDER_PERSON },
       { name: "Filippo", surname: "Mariani", image: PLACEHOLDER_PERSON },
       { name: "Alessandro", surname: "Cavalli", image: PLACEHOLDER_PERSON },
       { name: "Tommaso", surname: "Colombo", image: PLACEHOLDER_PERSON },
@@ -39,8 +39,8 @@ export const TEAM_STRUCTURE: Department[] = [
   {
     title: "Strategy & Electronics",
     members: [
-      { name: "Federico", surname: "Meli", image: PLACEHOLDER_PERSON },
-      { name: "Riccardo", surname: "Marinò", image: PLACEHOLDER_PERSON },
+      { name: "Federico", surname: "Meli", role: "Capo Reparto", image: PLACEHOLDER_PERSON },
+      { name: "Riccardo", surname: "Marinò", role: "Capo Reparto", image: PLACEHOLDER_PERSON },
       { name: "Andrea", surname: "Terragni", image: PLACEHOLDER_PERSON },
       { name: "Alessandro", surname: "Giani", image: PLACEHOLDER_PERSON },
     ]
@@ -48,8 +48,8 @@ export const TEAM_STRUCTURE: Department[] = [
   {
     title: "Aerodynamics",
     members: [
-      { name: "Lorenzo", surname: "Perfetti", image: PLACEHOLDER_PERSON },
-      { name: "Lorenzo", surname: "Morellini", image: PLACEHOLDER_PERSON },
+      { name: "Lorenzo", surname: "Perfetti", role: "Capo Reparto", image: PLACEHOLDER_PERSON },
+      { name: "Lorenzo", surname: "Morellini", role: "Capo Reparto", image: PLACEHOLDER_PERSON },
       { name: "Matteo", surname: "Lorenzini", image: PLACEHOLDER_PERSON },
       { name: "Daniele", surname: "Marcora", image: PLACEHOLDER_PERSON },
       { name: "Ali", surname: "Nazir", image: PLACEHOLDER_PERSON },
@@ -59,8 +59,8 @@ export const TEAM_STRUCTURE: Department[] = [
   {
     title: "Communication",
     members: [
-      { name: "Raffaello", surname: "Morga", image: PLACEHOLDER_PERSON },
-      { name: "Asia", surname: "Scalia", image: PLACEHOLDER_PERSON },
+      { name: "Raffaello", surname: "Morga", role: "Capo Reparto", image: PLACEHOLDER_PERSON },
+      { name: "Asia", surname: "Scalia", role: "Capo Reparto", image: PLACEHOLDER_PERSON },
       { name: "Carolina", surname: "Bonato", image: PLACEHOLDER_PERSON },
     ]
   }

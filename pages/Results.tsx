@@ -2,7 +2,6 @@ import React from 'react';
 import { RESULTS } from '../constants';
 import { Reveal } from '../components/ui/Reveal';
 import Transition from '../components/Transition';
-import { motion } from 'framer-motion';
 import { Trophy, MapPin, Car } from 'lucide-react';
 
 const Results: React.FC = () => {
@@ -13,8 +12,8 @@ const Results: React.FC = () => {
         <div className="text-center mb-24">
             <Reveal width="100%">
                 <h1 className="font-display font-black text-5xl md:text-7xl mb-4">RESULT</h1>
-                <div className="h-2 w-24 bg-emerald-900 mx-auto"></div>
             </Reveal>
+            <div className="h-2 w-24 bg-emerald-900 mx-auto"></div>
         </div>
 
         <div className="relative md:border-l-2 md:border-stone-300 md:dark:border-white/10 md:ml-0 space-y-24">
@@ -23,15 +22,7 @@ const Results: React.FC = () => {
                     {/* Dot on timeline */}
                     <div className="hidden md:block absolute left-[-9px] top-0 w-6 h-6 rounded-full bg-stone-50 dark:bg-stone-900 border-4 border-emerald-900 z-10"></div>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        {...(index === 0
-                            ? { animate: { opacity: 1, y: 0 } }
-                            : { whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: 0.2 } }
-                        )}
-                        transition={{ duration: 0.5, delay: index === 0 ? 0.3 : 0 }}
-                        className="md:grid md:grid-cols-5 md:gap-8 group"
-                    >
+                    <div className="md:grid md:grid-cols-5 md:gap-8 group">
                         {/* Year - visible on desktop left side */}
                         <div className="hidden md:block md:col-span-1 text-right pt-1 pr-8">
                             <span className="text-4xl font-display font-bold text-stone-900/20 dark:text-white/20 group-hover:text-emerald-900 transition-colors">{res.year}</span>
@@ -63,7 +54,7 @@ const Results: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             ))}
         </div>
