@@ -56,6 +56,7 @@ export const Reveal: React.FC<RevealProps> = ({
             left: 0,
             right: 0,
             background: "#00563b",
+            borderRadius: "8px",
           }}
         />
       </div>
