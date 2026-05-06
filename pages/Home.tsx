@@ -12,7 +12,6 @@ const Home: React.FC = () => {
     offset: ["start start", "end start"]
   });
 
-  const yText = useTransform(scrollYProgress, [0, 1], [0, 400]);
   const yImage = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const scaleImage = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
 
@@ -27,10 +26,7 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 bg-noise opacity-[0.05] pointer-events-none z-50 mix-blend-overlay"></div>
 
         {/* MASSIVE TEXT LAYER BEHIND */}
-        <motion.div
-          style={{ y: yText }}
-          className="relative z-10 flex flex-col items-center justify-center leading-none select-none -translate-y-[8vh]"
-        >
+        <div className="relative z-10 flex flex-col items-center justify-center leading-none select-none -translate-y-[8vh]">
            <motion.h1
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -47,7 +43,7 @@ const Home: React.FC = () => {
            >
               MECC
            </motion.h1>
-        </motion.div>
+        </div>
 
         {/* CENTRAL IMAGE - DANDELION / NATURE */}
         <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
