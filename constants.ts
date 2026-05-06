@@ -129,7 +129,7 @@ export const VEHICLES: Vehicle[] = [
     id: "whynot",
     name: "Why Not?",
     year: "2005",
-    image: asset("vehicles/M1-Why Not?.webp"),
+    image: asset("vehicles/M1-WhyNot.webp"),
     description: [
       "First Shell Eco-marathon vehicle by PoliMi.",
       "Trellis frame with aluminum tubes.",
