@@ -30,8 +30,8 @@ const TeamGroup: React.FC = () => {
         <div className="min-h-screen flex items-center justify-center bg-white dark:bg-black">
           <div className="text-center">
             <p className="text-stone-600 dark:text-gray-400 text-xl">Group not found.</p>
-            <Link to="/about" className="text-emerald-900 font-mono text-sm mt-4 inline-block hover:underline">
-              ← Back to About
+            <Link to="/team" className="text-emerald-900 font-mono text-sm mt-4 inline-block hover:underline">
+              ← Back to Team
             </Link>
           </div>
         </div>

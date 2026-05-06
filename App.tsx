@@ -5,9 +5,11 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
+import Team from './pages/Team';
 import Projects from './pages/Projects';
 import Results from './pages/Results';
 import TeamGroup from './pages/TeamGroup';
+import Sponsors from './pages/Sponsors';
 import { motion, AnimatePresence } from 'framer-motion';
 import Lenis from 'lenis';
 
@@ -67,9 +69,11 @@ const AnimatedRoutes = () => {
             <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/about/:groupId" element={<TeamGroup />} />
+                <Route path="/team" element={<Team />} />
+                <Route path="/team/:groupId" element={<TeamGroup />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/results" element={<Results />} />
+                <Route path="/sponsors" element={<Sponsors />} />
             </Routes>
         </AnimatePresence>
     );
