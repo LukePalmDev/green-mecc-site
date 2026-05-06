@@ -18,7 +18,7 @@ const Home: React.FC = () => {
 
   return (
     <Transition>
-    <div className="w-full bg-white dark:bg-stone-950 overflow-hidden cursor-none transition-colors duration-300" ref={containerRef}>
+    <div className="w-full bg-white dark:bg-stone-950 overflow-hidden transition-colors duration-300" ref={containerRef}>
       
       {/* --- HERO SECTION REDESIGN --- */}
       <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden pt-20">
