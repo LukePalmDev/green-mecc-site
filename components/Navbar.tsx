@@ -9,11 +9,11 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
-    { name: 'About', path: '/about' },
     { name: 'Projects', path: '/projects' },
     { name: 'Results', path: '/results' },
     { name: 'Team', path: '/team' },
     { name: 'Sponsors', path: '/sponsors' },
+    { name: 'About', path: '/about' },
   ];
 
   return (
