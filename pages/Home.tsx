@@ -126,24 +126,20 @@ const Home: React.FC = () => {
             </motion.div>
         </div>
 
-        {/* Scroll Indicator - Bottom Right and Rotated */}
+        {/* Scroll Indicator - Bottom Right */}
         <div className="absolute right-8 bottom-10 z-20 hidden md:block">
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2.5 }}
-                className="flex items-center justify-center gap-3 text-stone-900/30 dark:text-white/30 rotate-90"
+                className="flex items-center justify-center text-stone-900/30 dark:text-white/30"
             >
-                <motion.span
-                    animate={{ x: [4, 14, 4] }}
+                <motion.div
+                    animate={{ y: [0, 8, 0] }}
                     transition={{ repeat: Infinity, duration: 2 }}
-                    className="text-[10px] font-mono uppercase tracking-widest leading-none"
                 >
-                    Scroll
-                </motion.span>
-                <div className="-rotate-90 flex items-center justify-center">
                     <ArrowDown size={16} />
-                </div>
+                </motion.div>
             </motion.div>
         </div>
       </section>
