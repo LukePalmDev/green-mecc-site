@@ -1,5 +1,5 @@
 import React from 'react';
-import { PARTNERS } from '../constants';
+import { PARTNERS, SPONSORS_CONTENT } from '../content/sponsors';
 import { Reveal } from '../components/ui/Reveal';
 import Transition from '../components/Transition';
 
@@ -11,10 +11,10 @@ const Sponsors: React.FC = () => {
       {/* Header */}
       <div className="max-w-7xl mx-auto px-6 mb-20">
         <Reveal>
-          <h1 className="font-display font-black text-6xl md:text-9xl text-stone-900 dark:text-white mb-2">SPONSORS</h1>
+          <h1 className="font-display font-black text-6xl md:text-9xl text-stone-900 dark:text-white mb-2">{SPONSORS_CONTENT.titolo}</h1>
         </Reveal>
         <p className="text-xl text-emerald-900 font-mono border-l-4 border-emerald-900 pl-4 max-w-xl">
-          The partners and institutions that make our mission possible, supporting the innovation and research of Green Mecc.
+          {SPONSORS_CONTENT.descrizione}
         </p>
       </div>
 

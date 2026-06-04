@@ -1,5 +1,5 @@
 import React from 'react';
-import { RESULTS } from '../constants';
+import { RESULTS_CONTENT, RESULTS } from '../content/results';
 import { Reveal } from '../components/ui/Reveal';
 import Transition from '../components/Transition';
 import { Trophy, MapPin, Car } from 'lucide-react';
@@ -11,7 +11,7 @@ const Results: React.FC = () => {
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-24">
             <Reveal width="100%">
-                <h1 className="font-display font-black text-5xl md:text-7xl mb-4">RESULT</h1>
+                <h1 className="font-display font-black text-5xl md:text-7xl mb-4">{RESULTS_CONTENT.titolo}</h1>
             </Reveal>
             <div className="h-2 w-24 bg-emerald-900 mx-auto"></div>
         </div>

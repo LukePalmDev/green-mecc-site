@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { DEPARTMENTS_INFO } from '../constants';
+import { DEPARTMENTS_INFO, TEAM_CONTENT } from '../content/team';
 import { Reveal } from '../components/ui/Reveal';
 import Transition from '../components/Transition';
 import { ArrowUpRight } from 'lucide-react';
-import { asset } from '../utils/asset';
 
 const Team: React.FC = () => {
   return (
@@ -14,10 +13,10 @@ const Team: React.FC = () => {
       {/* Header */}
       <div className="max-w-7xl mx-auto px-6 mb-20">
         <Reveal>
-          <h1 className="font-display font-black text-6xl md:text-9xl text-stone-900 dark:text-white mb-2">TEAM</h1>
+          <h1 className="font-display font-black text-6xl md:text-9xl text-stone-900 dark:text-white mb-2">{TEAM_CONTENT.titolo}</h1>
         </Reveal>
         <p className="text-xl text-emerald-900 font-mono border-l-4 border-emerald-900 pl-4 max-w-xl">
-          We are a multidisciplinary group of students from Politecnico di Milano, united by the passion for innovation and sustainability.
+          {TEAM_CONTENT.descrizione}
         </p>
       </div>
 
@@ -79,7 +78,7 @@ const Team: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-8">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-display font-black text-transparent bg-clip-text bg-gradient-to-b from-stone-900 to-stone-600 dark:from-white dark:to-gray-600 leading-tight py-1">
-              ALBO
+              {TEAM_CONTENT.albo.titolo}
             </h2>
           </div>
 
@@ -87,15 +86,15 @@ const Team: React.FC = () => {
             {/* Text Side */}
             <div className="text-stone-600 dark:text-gray-300 text-sm sm:text-base md:text-lg font-light leading-relaxed">
               <p>
-                L'Albo raccoglie tutti gli ex studenti del Politecnico di Milano che, nel corso degli anni, hanno contribuito alla crescita e ai successi di Green Mecc. Il loro impegno, la loro passione e le competenze acquisite durante il percorso nel team hanno reso possibile i traguardi raggiunti. Essere parte di questa realtà significa entrare a far parte di una comunità che continua a crescere e a ispirare le generazioni future di ingegneri.
+                {TEAM_CONTENT.albo.testo}
               </p>
             </div>
 
             {/* Image Side */}
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-stone-300 dark:border-white/10 shadow-2xl shadow-green-900/20">
               <img
-                src={asset("T0-Albo.jpg")}
-                alt="Albo Green Mecc"
+                src={TEAM_CONTENT.albo.immagine}
+                alt={TEAM_CONTENT.albo.testoAlternativoImmagine}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>

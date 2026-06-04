@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { DEPARTMENTS_INFO, TEAM_STRUCTURE } from '../constants';
+import { DEPARTMENTS_INFO, TEAM_CONTENT, TEAM_STRUCTURE } from '../content/team';
 import { Reveal } from '../components/ui/Reveal';
 import Transition from '../components/Transition';
 import { motion } from 'framer-motion';
@@ -29,9 +29,9 @@ const TeamGroup: React.FC = () => {
       <Transition>
         <div className="min-h-screen flex items-center justify-center bg-white dark:bg-black">
           <div className="text-center">
-            <p className="text-stone-600 dark:text-gray-400 text-xl">Group not found.</p>
+            <p className="text-stone-600 dark:text-gray-400 text-xl">{TEAM_CONTENT.testoGruppoNonTrovato}</p>
             <Link to="/team" className="text-emerald-900 font-mono text-sm mt-4 inline-block hover:underline">
-              ← Back to Team
+              ← {TEAM_CONTENT.linkTornaAlTeam}
             </Link>
           </div>
         </div>
@@ -50,7 +50,7 @@ const TeamGroup: React.FC = () => {
             className="inline-flex items-center gap-2 text-emerald-900 font-mono text-xs uppercase tracking-widest mb-16 hover:gap-4 transition-all duration-300"
           >
             <ArrowLeft size={14} />
-            Back to Team
+            {TEAM_CONTENT.linkTornaAlTeam}
           </Link>
 
           {/* Header */}
@@ -106,7 +106,7 @@ const TeamGroup: React.FC = () => {
                 {capi.length > 0 && (
                   <div className="mb-12">
                     <p className="text-emerald-900 font-mono text-xs uppercase tracking-[0.3em] mb-6 border-b border-emerald-900/20 pb-3">
-                      Capo Reparto
+                      {TEAM_CONTENT.etichettaCapoReparto}
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                       {capi.map(renderCard)}
@@ -117,7 +117,7 @@ const TeamGroup: React.FC = () => {
                   <div>
                     {capi.length > 0 && (
                       <p className="text-stone-500 dark:text-gray-500 font-mono text-xs uppercase tracking-[0.3em] mb-6 border-b border-stone-200 dark:border-white/10 pb-3">
-                        Membri
+                        {TEAM_CONTENT.etichettaMembri}
                       </p>
                     )}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -129,7 +129,7 @@ const TeamGroup: React.FC = () => {
             );
           })() : (
             <p className="text-stone-600 dark:text-gray-400 text-xl font-light">
-              Members information coming soon.
+              {TEAM_CONTENT.testoMembriInArrivo}
             </p>
           )}
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { VEHICLES } from '../constants';
+import { PROJECTS_CONTENT, VEHICLES } from '../content/projects';
 import { Reveal } from '../components/ui/Reveal';
 import Transition from '../components/Transition';
 
@@ -12,7 +12,7 @@ const Projects: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-24">
           <Reveal width="100%">
-            <h1 className="font-display font-black text-5xl md:text-7xl mb-4">PROJECT</h1>
+            <h1 className="font-display font-black text-5xl md:text-7xl mb-4">{PROJECTS_CONTENT.titolo}</h1>
           </Reveal>
           <div className="h-2 w-24 bg-emerald-900 mx-auto"></div>
         </div>

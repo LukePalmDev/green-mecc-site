@@ -1,9 +1,8 @@
 import React, { useRef } from 'react';
-import { PARTNERS } from '../constants';
-import { asset } from '../utils/asset';
 import Transition from '../components/Transition';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
+import { HOME_CONTENT } from '../content/home';
 
 const Home: React.FC = () => {
   const containerRef = useRef(null);
@@ -33,7 +32,7 @@ const Home: React.FC = () => {
               transition={{ duration: 1.2, delay: 0.5, ease: [0.76, 0, 0.24, 1] }}
               className="font-display font-black text-[12vw] md:text-[12vw] tracking-tighter text-emerald-900 dark:text-white "
            >
-              GREEN
+              {HOME_CONTENT.titoloPrimaRiga}
            </motion.h1>
            <motion.h1
               initial={{ y: 100, opacity: 0 }}
@@ -41,7 +40,7 @@ const Home: React.FC = () => {
               transition={{ duration: 1.2, delay: 0.6, ease: [0.76, 0, 0.24, 1] }}
               className="font-display font-black text-[10vw] md:text-[10vw] tracking-tighter text-stone-900 dark:text-white -mt-[2vw] mix-blend-exclusion"
            >
-              MECC
+              {HOME_CONTENT.titoloSecondaRiga}
            </motion.h1>
         </div>
 
@@ -72,9 +71,9 @@ const Home: React.FC = () => {
                }} />
              </div>
              <img
-              src={asset("Sfondo.webp")}
+              src={HOME_CONTENT.immagineSfondo}
               className="w-full h-full object-cover opacity-80 dark:opacity-60"
-              alt="Green Mecc Background"
+              alt={HOME_CONTENT.testoAlternativoImmagine}
              />
           </motion.div>
         </div>
@@ -96,7 +95,7 @@ const Home: React.FC = () => {
                   className="absolute -top-3 left-0 right-0 flex justify-center z-20"
                 >
                   <span className="bg-white dark:bg-stone-950 px-6 text-emerald-900 font-mono text-xs md:text-sm uppercase font-bold whitespace-nowrap tracking-[0.4em]">
-                    Politecnico di Milano
+                    {HOME_CONTENT.etichetta}
                   </span>
                 </motion.div>
 
@@ -108,8 +107,8 @@ const Home: React.FC = () => {
                   className="absolute bottom-8 left-0 right-0 text-center px-8"
                 >
                     <p className="text-stone-600 dark:text-gray-300 text-lg md:text-2xl font-light font-sans max-w-xl mx-auto">
-                      The official team competing in the <span className="text-stone-900 dark:text-white font-bold relative inline-block">
-                        Shell Eco-marathon
+                      {HOME_CONTENT.descrizionePrimaParte} <span className="text-stone-900 dark:text-white font-bold relative inline-block">
+                        {HOME_CONTENT.descrizioneEvidenziata}
                         <motion.span
                           initial={{ width: 0 }}
                           animate={{ width: "100%" }}
@@ -144,7 +143,7 @@ const Home: React.FC = () => {
       <section className="py-20 border-y border-stone-300 dark:border-white/10 bg-stone-100 dark:bg-black/50 overflow-hidden relative transition-colors duration-300">
          <div className="absolute inset-0 bg-emerald-900/5 mix-blend-color-dodge"></div>
          <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
-            <span className="font-mono text-xs uppercase tracking-[0.3em] text-stone-600 dark:text-gray-500">Trusted Partners</span>
+            <span className="font-mono text-xs uppercase tracking-[0.3em] text-stone-600 dark:text-gray-500">{HOME_CONTENT.sezionePartner}</span>
          </div>
 
          <div className="flex overflow-hidden group">
@@ -153,7 +152,7 @@ const Home: React.FC = () => {
                transition={{ repeat: Infinity, ease: "linear", duration: 20 }}
                className="flex gap-20 items-center px-10 whitespace-nowrap"
             >
-                {[...PARTNERS, ...PARTNERS].map((partner, index) => (
+                {[...HOME_CONTENT.partnerInEvidenza, ...HOME_CONTENT.partnerInEvidenza].map((partner, index) => (
                     <div key={index} className="relative w-40 h-20 flex items-center justify-center opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300">
                         <img src={partner.logo} alt={partner.name} className="max-w-full max-h-full object-contain" />
                     </div>
