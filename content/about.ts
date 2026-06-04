@@ -1,29 +1,29 @@
 export const ABOUT_CONTENT = {
   titolo: "ABOUT",
   descrizione:
-    "We are a multidisciplinary group of students from Politecnico di Milano, united by the passion for innovation and sustainability.",
-  missioneTitoloPrimaRiga: "OUR",
-  missioneTitoloSecondaRiga: "MISSION",
+    "Green Mecc: a forward-looking team. The team consists of students from Politecnico di Milano working together to design and build an ultra-high-efficiency vehicle. The entire project development cycle, from the initial concept to the final manufacturing of the vehicle, is managed completely in-house by the team. Ultimately, the vehicle will compete in the Shell Eco-marathon, a premier international competition in the field of sustainable mobility.",
+  missioneTitoloPrimaRiga: "DISTINCTIVE ASPECTS",
+  missioneTitoloSecondaRiga: "OF THE PROJECT",
   missioneDescrizione:
-    "Engineering the future of sustainable mobility through student-driven innovation.",
+    "The principles that guide our technical, educational, and interdisciplinary work.",
   schede: [
     {
       numero: "01",
-      titolo: "Collaborative Platform",
+      titolo: "Environmental Awareness",
       testo:
-        "Achieving practical experience in maximizing energy efficiency through shared knowledge.",
+        "Gaining greater awareness of the environmental impact of current vehicles, aiming to develop ultra-high efficiency solutions to reduce fuel consumption and emissions.",
     },
     {
       numero: "02",
-      titolo: "Student Driven",
+      titolo: "Hands-on Team Training",
       testo:
-        "Students manage the entire development process, from concept design to on-track testing.",
+        "A growth path that integrates theoretical university studies with practical application, actively contributing to the student's overall development.",
     },
     {
       numero: "03",
-      titolo: "Since 2005",
+      titolo: "Interdisciplinary Approach",
       testo:
-        "A legacy of mechanical engineering excellence supporting high efficiency vehicle research.",
+        "The synergistic integration of various academic disciplines, engineering for engineering students and communication for design students, applied to the project's development to foster a comprehensive, systemic vision.",
     },
   ],
 };
