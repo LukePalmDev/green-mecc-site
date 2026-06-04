@@ -10,11 +10,13 @@ import { TeamMember } from '../types';
 // Mappa gli id dei DEPARTMENTS_INFO ai titoli in TEAM_STRUCTURE
 const GROUP_ID_TO_TEAM: Record<string, string> = {
   management: 'Management',
-  chassis: 'Chassis & Subsystem',
-  drivetrain: 'Drivetrain',
-  electronics: 'Strategy & Electronics',
+  chassis: 'Chassis',
+  'mechanical-design': 'Mechanical Design',
+  strategy: 'Strategy',
+  electronics: 'Electronics',
   aerodynamics: 'Aerodynamics',
-  communication: 'Communication',
+  'design-communication': 'Design & Communication',
+  'logistics-pr': 'Logistics & PR',
 };
 
 const TeamGroup: React.FC = () => {

@@ -23,14 +23,6 @@ export const TEAM_CONTENT = {
 
 export const DEPARTMENTS_INFO = [
   {
-    id: "supervisor",
-    title: "Academic Supervisor",
-    icon: asset("departments/structure.svg"),
-    image: asset("T7-ACADEMIC SUPERVISOR.jpg"),
-    description:
-      "Provides institutional guidance and academic oversight, linking the team with the university's research goals and ensuring alignment with educational objectives.",
-  },
-  {
     id: "management",
     title: "Management",
     icon: asset("departments/management-3.svg"),
@@ -40,27 +32,35 @@ export const DEPARTMENTS_INFO = [
   },
   {
     id: "chassis",
-    title: "Chassis & Subsystem",
+    title: "Chassis",
     icon: asset("departments/chassis.svg"),
     image: asset("mission/T5-CHASSIS & SUBSYSTEM.jpg"),
     description:
-      "Responsible for designing, manufacturing, and assembling the chassis and subsystems. The design process utilizes advanced CAD software and Finite Element simulations (FEM). Experts in composite materials processing.",
+      "The Chassis Department is responsible for the design, structural analysis, and manufacturing of our vehicle's chassis. Our goal is to reduce the vehicle’s weight to minimize energy consumption while maintaining high stiffness and ensuring protection for the driver. We also design all removable body parts such as the doors, the bonnet and the trunk. We work with carbon composite materials, for which we also produce the moulds. Our workflow encompasses surface modelling of the components, structural optimizations and hands-on lamination of the chassis and the other carbon fiber parts.",
   },
   {
-    id: "drivetrain",
-    title: "Drivetrain",
+    id: "mechanical-design",
+    title: "Mechanical Design",
     icon: asset("departments/engineering.svg"),
     image: asset("mission/T4-DRIVETRAIN.jpg"),
     description:
-      "Responsible for the design of the vehicle's drivetrain. The main working areas involve the electric motors, the custom transmission system, and the high-efficiency wheel hubs.",
+      "The mechanical design department is responsible for the technical development of the vehicle, from defining design solutions to manufacturing the components. Activities include CAD design, the integration of mechanical and electrical systems, weight and efficiency optimization, the validation of technical solutions, and support for the production and assembly of the prototype.",
   },
   {
-    id: "electronics",
-    title: "Strategy & Electronics",
+    id: "strategy",
+    title: "Strategy",
     icon: asset("departments/circuit.svg"),
     image: asset("mission/T3-STRATEGY & ELECTRONICS.jpg"),
     description:
-      "Develops a reliable and efficient electrical system. Accurate numerical models are created to simulate vehicle behavior and optimize race strategy. On-track tests validate these models.",
+      "The department develops virtual vehicle and circuit modeling using MATLAB and SIMULINK, facilitating the identification of optimized driving paradigms designed to drive down fuel consumption and streamline overall performance efficiency.",
+  },
+  {
+    id: "electronics",
+    title: "Electronics",
+    icon: asset("departments/circuit.svg"),
+    image: asset("mission/T3-STRATEGY & ELECTRONICS.jpg"),
+    description:
+      "Responsible for the design, development, and integration of the vehicle’s electrical architecture and control systems. The process includes custom PCB engineering and power management for the powertrain, alongside the implementation of real-time data acquisition, sensor fusion, and telemetry for performance optimization.",
   },
   {
     id: "aerodynamics",
@@ -71,12 +71,20 @@ export const DEPARTMENTS_INFO = [
       "Responsible for defining the external shape of the vehicle body to optimize aerodynamic efficiency. Fluid dynamic analyses are carried out using advanced CFD simulations.",
   },
   {
-    id: "communication",
-    title: "Communication",
+    id: "design-communication",
+    title: "Design & Communication",
     icon: asset("departments/bullhorn-2.svg"),
     image: asset("T1-COMMUNICATION.webp"),
     description:
-      "Manages social media, the website, and PR. A communication plan is defined to narrate the team's journey to the Shell Eco-marathon, engaging sponsors and the public.",
+      "Responsible for defining and managing the team’s visual identity and communication strategy across digital and physical platforms. The department handles social media content production (photography, video, and motion graphics), develops official merchandise, designs graphic and presentation materials, and creates the vehicle livery, ensuring a consistent and cohesive team identity.",
+  },
+  {
+    id: "logistics-pr",
+    title: "Logistics & PR",
+    icon: asset("departments/structure.svg"),
+    image: asset("T7-ACADEMIC SUPERVISOR.jpg"),
+    description:
+      "The Logistics & PR department plays a dual role within the Green Mecc Team. On one hand, it is responsible for organizing and managing all non-strictly technical activities, such as the arrangement of the workshop, the recruitment of new members, and the organization of events the Team is invited to attend by the Politecnico di Milano. On the other hand, the department handles the search for and management of sponsorships, an activity that stems from the needs highlighted by the other departments. This process is carried out by managing the administrative and organizational procedures necessary to establish contracts or agreements capable of meeting the identified needs.",
   },
 ];
 
@@ -88,7 +96,7 @@ export const TEAM_STRUCTURE: Department[] = [
     ],
   },
   {
-    title: "Chassis & Subsystem",
+    title: "Chassis",
     members: [
       { name: "Stefano", surname: "Chiarito", role: "Capo Reparto", image: IMMAGINE_PERSONA_SEGNAPOSTO },
       { name: "Giacomo Giovanni", surname: "Moroni", role: "Capo Reparto", image: IMMAGINE_PERSONA_SEGNAPOSTO },
@@ -102,7 +110,7 @@ export const TEAM_STRUCTURE: Department[] = [
     ],
   },
   {
-    title: "Drivetrain",
+    title: "Mechanical Design",
     members: [
       { name: "Giacomo", surname: "Bertocchi", role: "Capo Reparto", image: IMMAGINE_PERSONA_SEGNAPOSTO },
       { name: "Leonardo", surname: "Mattiuzzi", role: "Capo Reparto", image: IMMAGINE_PERSONA_SEGNAPOSTO },
@@ -114,13 +122,17 @@ export const TEAM_STRUCTURE: Department[] = [
     ],
   },
   {
-    title: "Strategy & Electronics",
+    title: "Strategy",
     members: [
       { name: "Federico", surname: "Meli", role: "Capo Reparto", image: IMMAGINE_PERSONA_SEGNAPOSTO },
       { name: "Riccardo", surname: "Marinò", role: "Capo Reparto", image: IMMAGINE_PERSONA_SEGNAPOSTO },
       { name: "Andrea", surname: "Terragni", image: IMMAGINE_PERSONA_SEGNAPOSTO },
       { name: "Alessandro", surname: "Giani", image: IMMAGINE_PERSONA_SEGNAPOSTO },
     ],
+  },
+  {
+    title: "Electronics",
+    members: [],
   },
   {
     title: "Aerodynamics",
@@ -134,11 +146,15 @@ export const TEAM_STRUCTURE: Department[] = [
     ],
   },
   {
-    title: "Communication",
+    title: "Design & Communication",
     members: [
       { name: "Raffaello", surname: "Morga", role: "Capo Reparto", image: IMMAGINE_PERSONA_SEGNAPOSTO },
       { name: "Asia", surname: "Scalia", role: "Capo Reparto", image: IMMAGINE_PERSONA_SEGNAPOSTO },
       { name: "Carolina", surname: "Bonato", image: IMMAGINE_PERSONA_SEGNAPOSTO },
     ],
+  },
+  {
+    title: "Logistics & PR",
+    members: [],
   },
 ];
