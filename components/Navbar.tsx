@@ -29,7 +29,9 @@ const Navbar: React.FC = () => {
                   to={link.path}
                   className={({ isActive }) =>
                     `relative text-xs font-mono font-bold uppercase tracking-widest transition-colors duration-300 ${
-                      isActive ? 'text-emerald-900' : 'text-black-400 hover:text-white'
+                      isActive
+                        ? 'text-emerald-900 dark:text-emerald-400'
+                        : 'text-stone-700 dark:text-gray-300 hover:text-emerald-900 dark:hover:text-white'
                     }`
                   }
                 >
