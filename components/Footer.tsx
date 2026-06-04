@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, MapPin, Instagram, Facebook, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
+import { FOOTER_CONTENT } from '../content/layout';
 
 const Footer: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
@@ -11,38 +12,40 @@ const Footer: React.FC = () => {
 
         {/* Contact */}
         <div className="flex flex-col items-start space-y-4">
-          <h3 className="font-display text-2xl font-bold mb-2">Contact Us</h3>
-          <a href="mailto:sem-dmec@polimi.it" className="flex items-center space-x-3 text-stone-600 dark:text-gray-400 hover:text-emerald-900 transition-colors group">
+          <h3 className="font-display text-2xl font-bold mb-2">{FOOTER_CONTENT.contatti.titolo}</h3>
+          <a href={`mailto:${FOOTER_CONTENT.contatti.email}`} className="flex items-center space-x-3 text-stone-600 dark:text-gray-400 hover:text-emerald-900 transition-colors group">
             <div className="p-3 border border-stone-300 dark:border-white/10 rounded-full group-hover:border-emerald-900 transition-colors">
                 <Mail size={20} />
             </div>
-            <span>sem-dmec@polimi.it</span>
+            <span>{FOOTER_CONTENT.contatti.email}</span>
           </a>
         </div>
 
         {/* Location */}
         <div className="flex flex-col items-start space-y-4">
-          <h3 className="font-display text-2xl font-bold mb-2">Location</h3>
-          <a href="https://maps.app.goo.gl/mH2p1g7C5bVS8Lb66" target="_blank" rel="noreferrer" className="flex items-start space-x-3 text-stone-600 dark:text-gray-400 hover:text-emerald-900 transition-colors group">
+          <h3 className="font-display text-2xl font-bold mb-2">{FOOTER_CONTENT.sede.titolo}</h3>
+          <a href={FOOTER_CONTENT.sede.linkMappa} target="_blank" rel="noreferrer" className="flex items-start space-x-3 text-stone-600 dark:text-gray-400 hover:text-emerald-900 transition-colors group">
             <div className="p-3 border border-stone-300 dark:border-white/10 rounded-full group-hover:border-emerald-900 transition-colors">
                 <MapPin size={20} />
             </div>
             <span>
-              Politecnico di Milano<br />
-              Via Candiani 72,<br />
-              20158, Milano, ITALY
+              {FOOTER_CONTENT.sede.righeIndirizzo.map((riga) => (
+                <React.Fragment key={riga}>
+                  {riga}<br />
+                </React.Fragment>
+              ))}
             </span>
           </a>
         </div>
 
         {/* Social */}
         <div className="flex flex-col items-start space-y-4">
-          <h3 className="font-display text-2xl font-bold mb-2">Follow Us</h3>
+          <h3 className="font-display text-2xl font-bold mb-2">{FOOTER_CONTENT.social.titolo}</h3>
           <div className="flex space-x-4">
-            <a href="https://www.instagram.com/team_green_mecc/" target="_blank" rel="noreferrer" className="p-3 border border-stone-300 dark:border-white/10 rounded-full hover:border-emerald-900 hover:text-emerald-900 text-stone-600 dark:text-gray-400 transition-all transform hover:scale-110">
+            <a href={FOOTER_CONTENT.social.instagram} target="_blank" rel="noreferrer" className="p-3 border border-stone-300 dark:border-white/10 rounded-full hover:border-emerald-900 hover:text-emerald-900 text-stone-600 dark:text-gray-400 transition-all transform hover:scale-110">
               <Instagram size={24} />
             </a>
-            <a href="https://www.facebook.com/meccEpolimi/" target="_blank" rel="noreferrer" className="p-3 border border-stone-300 dark:border-white/10 rounded-full hover:border-emerald-900 hover:text-emerald-900 text-stone-600 dark:text-gray-400 transition-all transform hover:scale-110">
+            <a href={FOOTER_CONTENT.social.facebook} target="_blank" rel="noreferrer" className="p-3 border border-stone-300 dark:border-white/10 rounded-full hover:border-emerald-900 hover:text-emerald-900 text-stone-600 dark:text-gray-400 transition-all transform hover:scale-110">
               <Facebook size={24} />
             </a>
           </div>
@@ -50,7 +53,7 @@ const Footer: React.FC = () => {
 
         {/* Theme Toggle */}
         <div className="flex flex-col items-start space-y-4">
-          <h3 className="font-display text-2xl font-bold mb-2">Theme</h3>
+          <h3 className="font-display text-2xl font-bold mb-2">{FOOTER_CONTENT.tema.titolo}</h3>
           <button
             onClick={toggleTheme}
             className="flex items-center space-x-3 text-stone-600 dark:text-gray-400 hover:text-emerald-900 transition-colors group"
@@ -59,15 +62,15 @@ const Footer: React.FC = () => {
               {theme === 'dark' ? <Sun size={24} /> : <Moon size={24} />}
             </div>
             <span className="font-medium">
-              {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+              {theme === 'dark' ? FOOTER_CONTENT.tema.testoModalitaChiara : FOOTER_CONTENT.tema.testoModalitaScura}
             </span>
           </button>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-stone-300 dark:border-white/10 flex flex-col md:flex-row justify-between items-center opacity-40">
-        <p className="text-sm">© {new Date().getFullYear()} Team Green Mecc.</p>
-        <p className="text-sm font-display font-bold">POLITECNICO DI MILANO</p>
+        <p className="text-sm">© {new Date().getFullYear()} {FOOTER_CONTENT.copyrightNome}</p>
+        <p className="text-sm font-display font-bold">{FOOTER_CONTENT.istituzione}</p>
       </div>
     </footer>
   );

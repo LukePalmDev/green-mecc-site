@@ -2,19 +2,12 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { NAVBAR_CONTENT } from '../content/layout';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-
-  const navLinks = [
-    { name: 'Projects', path: '/projects' },
-    { name: 'Results', path: '/results' },
-    { name: 'Team', path: '/team' },
-    { name: 'Sponsors', path: '/sponsors' },
-    { name: 'About', path: '/about' },
-  ];
 
   return (
     <>
@@ -23,14 +16,14 @@ const Navbar: React.FC = () => {
             {/* Logo */}
           <div className="pointer-events-auto bg-white/80 dark:bg-black/20 backdrop-blur-md border border-stone-300 dark:border-white/10 px-6 py-3 rounded-full transition-colors duration-300">
             <NavLink to="/" className="font-display font-bold text-xl tracking-tighter text-stone-900 dark:text-white hover:text-emerald-900 transition-colors">
-              GREEN MECC
+              {NAVBAR_CONTENT.nomeSito}
             </NavLink>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:block pointer-events-auto bg-white/80 dark:bg-black/20 backdrop-blur-md border border-stone-300 dark:border-white/10 px-8 py-3 rounded-full transition-colors duration-300">
             <div className="flex items-baseline space-x-10">
-              {navLinks.map((link) => (
+              {NAVBAR_CONTENT.vociMenu.map((link) => (
                 <NavLink
                   key={link.name}
                   to={link.path}
@@ -79,7 +72,7 @@ const Navbar: React.FC = () => {
             className="fixed inset-0 z-40 bg-white dark:bg-stone-950 flex items-center justify-center"
           >
             <div className="flex flex-col items-center space-y-8 px-6">
-              {navLinks.map((link, i) => (
+              {NAVBAR_CONTENT.vociMenu.map((link, i) => (
                 <motion.div
                   key={link.name}
                   initial={{ opacity: 0, y: 50 }}
