@@ -4,7 +4,7 @@ import { asset } from '../utils/asset';
 export const SPONSORS_CONTENT = {
   titolo: "SPONSORS",
   descrizione:
-    "The partners and institutions that make our mission possible, supporting the innovation and research of Green Mecc.",
+    "A sincere thank you goes to our sponsors! Thanks to the support of several companies, the team is able to successfully complete its project. We are deeply grateful because this contribution goes far beyond building a vehicle: it fosters the professional and personal growth of many students every year.",
 };
 
 export const PARTNERS: Partner[] = [
