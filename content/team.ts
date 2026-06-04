@@ -19,6 +19,13 @@ export const TEAM_CONTENT = {
     immagine: asset("T0-Albo.jpg"),
     testoAlternativoImmagine: "Albo Green Mecc",
   },
+  joinUs: {
+    titolo: "JOIN US",
+    testo:
+      "Joining the team is an incredible opportunity because it allows you to expand your theoretical knowledge and finally turn it into real-world practice. This is exactly what it takes to become a true engineer. You won't just be reading textbooks or memorizing formulas; you will be getting your hands dirty, tackling complex problems, and finding innovative solutions. By working on a tangible project, you will bridge the gap between academic concepts and actual manufacturing, shaping yourself into a complete, forward-thinking professional ready to build the future of mobility.",
+    recruiting:
+      "The recruiting phase will take place in October. The selection process consists of a written test, followed by an oral interview for those who pass the first stage.",
+  },
 };
 
 export const DEPARTMENTS_INFO = [

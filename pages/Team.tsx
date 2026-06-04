@@ -102,6 +102,28 @@ const Team: React.FC = () => {
         </div>
       </section>
 
+      {/* --- JOIN US --- */}
+      <section className="mt-32 relative w-full bg-stone-50 dark:bg-stone-950 py-24 transition-colors duration-300">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-display font-black text-transparent bg-clip-text bg-gradient-to-b from-stone-900 to-stone-600 dark:from-white dark:to-gray-600 leading-tight py-1">
+              {TEAM_CONTENT.joinUs.titolo}
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <p className="text-stone-600 dark:text-gray-300 text-sm sm:text-base md:text-lg font-light leading-relaxed">
+              {TEAM_CONTENT.joinUs.testo}
+            </p>
+            <div className="border-l-4 border-emerald-900 pl-6">
+              <p className="text-emerald-900 font-mono text-sm sm:text-base md:text-lg leading-relaxed">
+                {TEAM_CONTENT.joinUs.recruiting}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
     </Transition>
   );
