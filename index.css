@@ -1,4 +1,11 @@
 /* SVG Animation Styles */
+@media (hover: hover) and (pointer: fine) {
+  html.cursor-idle,
+  html.cursor-idle * {
+    cursor: none !important;
+  }
+}
+
 .svg-wrapper {
   width: 100%;
   animation: float 6s ease-in-out infinite;

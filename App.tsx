@@ -61,6 +61,51 @@ const SmoothScroll = () => {
     return null;
 }
 
+// Nasconde il puntatore quando resta fermo o durante lo scroll e lo ripristina
+// appena l'utente muove nuovamente il mouse. Si applica solo ai dispositivi con
+// puntatore preciso, senza interferire con touch screen e tastiera.
+const CursorAutoHide = () => {
+  useEffect(() => {
+    const root = document.documentElement;
+    let idleTimeout: ReturnType<typeof setTimeout>;
+
+    const scheduleHide = (event?: Event) => {
+      root.classList.remove('cursor-idle');
+      clearTimeout(idleTimeout);
+
+      const target = event?.target;
+      if (
+        target instanceof Element &&
+        target.closest('a, button, input, textarea, select, [role="button"]')
+      ) {
+        return;
+      }
+
+      idleTimeout = setTimeout(() => root.classList.add('cursor-idle'), 1200);
+    };
+
+    const hideWhileScrolling = () => {
+      root.classList.add('cursor-idle');
+      clearTimeout(idleTimeout);
+    };
+
+    window.addEventListener('pointermove', scheduleHide, { passive: true });
+    window.addEventListener('pointerdown', scheduleHide, { passive: true });
+    window.addEventListener('scroll', hideWhileScrolling, { passive: true });
+    scheduleHide();
+
+    return () => {
+      clearTimeout(idleTimeout);
+      root.classList.remove('cursor-idle');
+      window.removeEventListener('pointermove', scheduleHide);
+      window.removeEventListener('pointerdown', scheduleHide);
+      window.removeEventListener('scroll', hideWhileScrolling);
+    };
+  }, []);
+
+  return null;
+};
+
 // Scroll Progress Indicator
 const ScrollProgress = () => {
   const [progress, setProgress] = useState(0);
@@ -115,6 +160,7 @@ const App: React.FC = () => {
       <Router>
         <ScrollToTop />
         <SmoothScroll />
+        <CursorAutoHide />
         <ScrollProgress />
         <div className="font-sans antialiased text-stone-900 dark:text-gray-100 bg-white dark:bg-stone-950 min-h-screen flex flex-col selection:bg-emerald-900 selection:text-white transition-colors duration-300">
           <Navbar />
