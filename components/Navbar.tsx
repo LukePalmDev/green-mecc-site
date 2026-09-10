@@ -21,8 +21,9 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:block pointer-events-auto bg-white/80 dark:bg-black/20 backdrop-blur-md border border-stone-300 dark:border-white/10 px-8 py-3 rounded-full transition-colors duration-300">
-            <div className="flex items-baseline space-x-10">
+          <div className="hidden md:block pointer-events-auto bg-white/80 dark:bg-black/20 backdrop-blur-md border border-stone-300 dark:border-white/10 px-6 lg:px-8 py-3 rounded-full transition-colors duration-300">
+            {/* space ridotto sui breakpoint intermedi: con 6 voci la pill andava a capo */}
+            <div className="flex items-baseline space-x-5 lg:space-x-10">
               {NAVBAR_CONTENT.vociMenu.map((link) => (
                 <NavLink
                   key={link.name}

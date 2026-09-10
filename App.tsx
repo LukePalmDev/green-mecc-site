@@ -10,6 +10,7 @@ import Projects from './pages/Projects';
 import Results from './pages/Results';
 import TeamGroup from './pages/TeamGroup';
 import Sponsors from './pages/Sponsors';
+import JoinUs from './pages/JoinUs';
 import { motion, AnimatePresence } from 'framer-motion';
 import Lenis from 'lenis';
 
@@ -99,6 +100,7 @@ const AnimatedRoutes = () => {
                 <Route path="/team/:groupId" element={<TeamGroup />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/results" element={<Results />} />
+                <Route path="/join-us" element={<JoinUs />} />
                 <Route path="/sponsors" element={<Sponsors />} />
             </Routes>
         </AnimatePresence>

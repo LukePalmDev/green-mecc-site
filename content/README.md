@@ -8,6 +8,7 @@ Per cambiare i testi del sito, modifica solo i file in questa cartella.
 - `projects.ts`: testi e schede dei veicoli.
 - `results.ts`: testi e risultati.
 - `sponsors.ts`: sponsor, loghi e link.
+- `joinus.ts`: testi della pagina Join Us (recruiting), fasi di selezione e FAQ.
 - `layout.ts`: menu, footer, contatti, sede e social.
 
 Regola pratica: cambia solo il testo tra virgolette.
@@ -40,3 +41,8 @@ description: [
 
 Per aggiungere un paragrafo, copia una riga e cambiane il testo, tenendo la
 virgola finale.
+
+## Segnaposto da sostituire
+
+Il file `joinus.ts` contiene testi provvisori marcati con la parola
+PLACEHOLDER. Vanno tutti sostituiti prima di pubblicare la pagina Join Us.

@@ -4,6 +4,7 @@ export const NAVBAR_CONTENT = {
     { name: "Projects", path: "/projects" },
     { name: "Results", path: "/results" },
     { name: "Team", path: "/team" },
+    { name: "Join Us", path: "/join-us" },
     { name: "Sponsors", path: "/sponsors" },
     { name: "About", path: "/about" },
   ],
