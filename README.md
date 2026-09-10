@@ -31,6 +31,17 @@ deploy.
 I testi modificabili sono nella cartella `content/`; le istruzioni dettagliate
 sono in `content/README.md`. Immagini, icone e loghi pubblici sono in `public/`.
 
+Gli asset della stagione 2026 sono organizzati così:
+
+- `public/team/covers/`: copertine dei reparti;
+- `public/team/members/`: foto dei membri, suddivise per reparto;
+- `public/sponsor/2026/`: i 20 loghi della lista sponsor aggiornata;
+- `public/vehicles/M7-Eros.webp`: Eros 2026;
+- `public/result/R6-2026.webp`: foto del risultato 2026.
+
+Le immagini originali ad alta risoluzione e i file Illustrator non vengono
+versionati: nel repository restano solo le versioni WebP ottimizzate per il web.
+
 La pagina recruiting è raggiungibile all'hash route `#/join-us`. La sua data di
 apertura, le fasi, le FAQ e il futuro link di candidatura sono in
 `content/joinus.ts`.

@@ -4,10 +4,11 @@ Per cambiare i testi del sito, modifica solo i file in questa cartella.
 
 - `home.ts`: testi della Home.
 - `about.ts`: testi della pagina About.
-- `team.ts`: testi della pagina Team, reparti, membri e Albo.
+- `team.ts`: testi della pagina Team, reparti, membri, ruoli e Albo. Le foto
+  collegate sono in `public/team/`.
 - `projects.ts`: testi e schede dei veicoli.
-- `results.ts`: testi e risultati.
-- `sponsors.ts`: sponsor, loghi e link.
+- `results.ts`: testi e risultati. Inserire solo risultati completi e confermati.
+- `sponsors.ts`: sponsor, loghi, link opzionali e tipo di sfondo del logo.
 - `joinus.ts`: testi della pagina Join Us (recruiting), fasi di selezione e FAQ.
 - `layout.ts`: menu, footer, contatti, sede e social.
 
@@ -26,6 +27,16 @@ titolo: "CHI SIAMO",
 ```
 
 Non cancellare virgole, parentesi o nomi prima dei due punti.
+
+## Team e sponsor
+
+Per un nuovo membro, aggiungi la foto WebP in
+`public/team/members/<id-reparto>/` e poi una voce in `TEAM_STRUCTURE`. Il ruolo
+`Capo Reparto` fa comparire automaticamente la persona nella sezione dedicata.
+
+Per un nuovo sponsor, aggiungi il logo ottimizzato in `public/sponsor/2026/` e
+una voce in `PARTNERS`. `url` è facoltativo: se manca, la scheda non è un link.
+Usa `surface: "dark"` solo per loghi bianchi o pensati per fondi scuri.
 
 ## Testi su piu paragrafi
 

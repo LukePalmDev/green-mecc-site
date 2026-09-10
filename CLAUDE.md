@@ -7,6 +7,8 @@
   `main`.
 - Base path Vite: `/green-mecc-site/`.
 - Non modificare o versionare `dist/`, `node_modules/` e file `.DS_Store`.
+- Non versionare link condivisi, password o token usati per recuperare asset
+  esterni.
 
 ## Regole di modifica
 
@@ -18,6 +20,13 @@
 - Conserva lo stile, il responsive design, il tema chiaro/scuro e
   l'accessibilità dei componenti esistenti.
 - Non inventare dati mancanti: annotali in `PUNTI_IN_SOSPESO.md`.
+- Salva le foto dei membri in `public/team/members/<id-reparto>/` e le
+  copertine in `public/team/covers/`; in `content/team.ts` assegna il ruolo
+  `Capo Reparto` solo alle persone esplicitamente marcate come capo nella fonte.
+- I loghi della stagione corrente sono in `public/sponsor/2026/`. Se un logo
+  nasce per uno sfondo scuro, usa `surface: "dark"` in `content/sponsors.ts`.
+- Per Results non pubblicare annate con risultato mancante o indicato con `?`:
+  lasciale in `PUNTI_IN_SOSPESO.md` fino alla conferma editoriale.
 
 ## Prima di pubblicare
 
@@ -26,7 +35,7 @@
 2. Esegui `npm run check`.
 3. Controlla che `git status` contenga solo modifiche previste.
 4. Dopo il push, attendi la GitHub Action e verifica il sito pubblico, inclusa
-   `#/join-us`.
+   `#/join-us`, `#/team`, `#/projects`, `#/results` e `#/sponsors`.
 
 ## Recruiting
 
