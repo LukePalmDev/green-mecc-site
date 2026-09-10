@@ -30,18 +30,21 @@ vengono eseguiti dalla GitHub Action prima del deploy.
 ## Contenuti
 
 I testi modificabili sono nella cartella `content/`; le istruzioni dettagliate
-sono in `content/README.md`. Immagini, icone e loghi pubblici sono in `public/`.
+sono in `content/README.md`. La procedura completa per gli aggiornamenti e' in
+`AGGIORNA-SITO.md`. Immagini, icone e loghi pubblici sono in `public/`.
 
 Gli asset della stagione 2026 sono organizzati così:
 
-- `public/team/covers/`: copertine dei reparti;
-- `public/team/members/`: foto dei membri, suddivise per reparto;
-- `public/sponsor/`: i 20 loghi della lista sponsor aggiornata;
-- `public/vehicles/M7-Eros.webp`: Eros 2026;
-- `public/result/R6-2026.webp`: foto del risultato 2026.
+- `public/general/`: immagini generali di Home e Albo;
+- `public/team/covers/`: copertine numerate dei reparti;
+- `public/team/members/`: foto numerate dei membri, suddivise per reparto;
+- `public/sponsor/`: i 21 loghi della lista sponsor aggiornata;
+- `public/vehicles/V7-EROS.webp`: Eros 2026;
+- `public/results/R6-2026.webp`: foto del risultato 2026.
 
 Le immagini originali ad alta risoluzione e i file Illustrator non vengono
-versionati: nel repository restano solo le versioni WebP ottimizzate per il web.
+versionati: si conservano su OneDrive e possono essere lavorati localmente in
+`assets-source/INBOX/`. Nel repository restano solo le versioni WebP ottimizzate.
 
 La pagina recruiting è raggiungibile all'hash route `#/join-us`. La sua data di
 apertura, le fasi, le FAQ e il futuro link di candidatura sono in
@@ -69,7 +72,12 @@ dei reparti `D` e i loghi sponsor `S`. Esempi:
 
 Per gli asset numerati usare `numberedAsset()` in `utils/asset.ts`: il percorso
 viene costruito dalla posizione e dal nome, senza duplicare il filename nei file
-dei contenuti.
+dei contenuti. Gli altri prefissi sono `G` per le immagini generali, `V` per i
+veicoli, `R` per i risultati, `TC` per le copertine Team e `TM` per i membri.
+
+Il comando `npm run asset:prepare` converte e ritaglia una singola immagine. Il
+comando `npm run asset:team-batch` prepara in blocco le foto di un'intera
+squadra; gli esempi completi sono in `AGGIORNA-SITO.md`.
 
 ## Pubblicazione
 

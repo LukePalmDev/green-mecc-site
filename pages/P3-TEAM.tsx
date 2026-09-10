@@ -60,11 +60,7 @@ const Team: React.FC = () => {
                     src={dept.image}
                     alt={dept.title}
                     loading="lazy"
-                    className={`w-full h-full object-cover transition-transform duration-700 ${
-                      dept.coverNeedsZoom
-                        ? 'scale-[1.6] hover:scale-[1.7]'
-                        : 'hover:scale-105'
-                    }`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
               </div>

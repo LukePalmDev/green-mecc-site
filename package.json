@@ -1,10 +1,12 @@
 {
-  "name": "team-green-mecc---redesigned",
+  "name": "green-mecc-site",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "asset:prepare": "node scripts/prepare-image.mjs",
+    "asset:team-batch": "node scripts/prepare-team-batch.mjs",
     "check:naming": "node scripts/check-naming.mjs",
     "typecheck": "tsc --noEmit",
     "check": "npm run check:naming && npm run typecheck && npm run build",
@@ -12,16 +14,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "framer-motion": "^12.23.26",
+    "lenis": "^1.3.26",
+    "lucide-react": "^0.561.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "framer-motion": "^12.23.26",
-    "react-router-dom": "^7.10.1",
-    "lucide-react": "^0.561.0",
-    "lenis": "1.0.45"
+    "react-router-dom": "^7.10.1"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "^5.0.0",
+    "sharp": "^0.35.4",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
   }

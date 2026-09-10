@@ -31,9 +31,13 @@ Non cancellare virgole, parentesi o nomi prima dei due punti.
 
 ## Team e sponsor
 
-Per un nuovo membro, aggiungi la foto WebP in
-`public/team/members/<id-reparto>/` e poi una voce in `TEAM_STRUCTURE`. Il ruolo
-`Capo Reparto` fa comparire automaticamente la persona nella sezione dedicata.
+Per un nuovo membro, aggiungi una voce in `members` nel reparto corretto di
+`DEPARTMENTS_INFO`.
+La foto viene associata automaticamente in base a reparto, posizione, nome e
+cognome. Usa `npm run asset:prepare -- member ...` oppure l'importazione in
+blocco descritta in `../AGGIORNA-SITO.md`; non scrivere percorsi immagine a mano.
+Il ruolo `Capo Reparto` fa comparire automaticamente la persona nella sezione
+dedicata.
 
 Per un nuovo sponsor, aggiungi il logo ottimizzato direttamente in
 `public/sponsor/` con il formato `S<ordine>-<NOME>.webp` e poi una voce in

@@ -7,11 +7,6 @@ export interface TeamMember {
   image: string;
 }
 
-export interface Department {
-  title: string;
-  members: TeamMember[];
-}
-
 export interface Vehicle {
   id: string;
   name: string;

@@ -3,11 +3,15 @@ const BASE = import.meta.env.BASE_URL;
 export const asset = (path: string): string =>
   `${BASE}${path.replace(/^\//, '')}`;
 
-const normalizeAssetName = (name: string, nameCase: 'upper' | 'lower'): string => {
-  const normalized = name
+const normalizeAssetName = (
+  name: string,
+  nameCase: 'upper' | 'lower',
+  stripNumbers: boolean,
+): string => {
+  const withoutAccents = name
     .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/\d+/g, '')
+    .replace(/[\u0300-\u036f]/g, '');
+  const normalized = (stripNumbers ? withoutAccents.replace(/\d+/g, '') : withoutAccents)
     .replace(/[.'’]/g, '')
     .replace(/[^a-zA-Z]+/g, '-')
     .replace(/^-|-$/g, '');
@@ -22,7 +26,8 @@ export const numberedAsset = (
   name: string,
   extension = 'webp',
   nameCase: 'upper' | 'lower' = 'upper',
+  stripNumbers = true,
 ): string =>
   asset(
-    `${directory}/${prefix.toUpperCase()}${order}-${normalizeAssetName(name, nameCase)}.${extension}`,
+    `${directory}/${prefix.toUpperCase()}${order}-${normalizeAssetName(name, nameCase, stripNumbers)}.${extension}`,
   );

@@ -7,6 +7,8 @@
   `main`.
 - Base path Vite: `/green-mecc-site/`.
 - Non modificare o versionare `dist/`, `node_modules/` e file `.DS_Store`.
+- Gli originali di foto e loghi restano su OneDrive o, solo durante la
+  lavorazione locale, in `assets-source/INBOX/`, che e' ignorata da Git.
 - Non versionare link condivisi, password o token usati per recuperare asset
   esterni.
 
@@ -20,9 +22,13 @@
 - Conserva lo stile, il responsive design, il tema chiaro/scuro e
   l'accessibilità dei componenti esistenti.
 - Non inventare dati mancanti: annotali in `PUNTI_IN_SOSPESO.md`.
-- Salva le foto dei membri in `public/team/members/<id-reparto>/` e le
-  copertine in `public/team/covers/`; in `content/C3-TEAM.ts` assegna il ruolo
-  `Capo Reparto` solo alle persone esplicitamente marcate come capo nella fonte.
+- Le foto dei membri seguono
+  `public/team/members/<id-reparto>/TM<ordine>-<NOME-COGNOME>.webp`; le copertine
+  `public/team/covers/TC<ordine>-<REPARTO>.webp`. In `content/C3-TEAM.ts` non
+  scrivere percorsi: sono derivati dall'ordine dei membri. Assegna `Capo
+  Reparto` solo alle persone esplicitamente marcate come capo nella fonte.
+- Per preparare immagini usa `npm run asset:prepare`; per un'intera squadra usa
+  `npm run asset:team-batch`. Segui `AGGIORNA-SITO.md`.
 - I loghi sponsor sono direttamente in `public/sponsor/` e si chiamano
   `S<ordine>-<NOME>.webp`, con il nome in maiuscolo e senza altri numeri. Se un
   logo nasce per uno sfondo scuro, usa `surface: "dark"` in
@@ -30,6 +36,9 @@
 - Le icone in `public/departments/` seguono `D<ordine>-<nome>.svg`, con nome
   minuscolo e senza numeri finali. Usa `numberedAsset()` invece di scrivere il
   filename completo nei contenuti.
+- Le immagini generali usano `G`, i veicoli `V`, i risultati `R`, le copertine
+  Team `TC` e le foto membri `TM`. Tutti i nomi descrittivi sono maiuscoli,
+  tranne le icone reparto `D` che seguono lo standard minuscolo gia' adottato.
 - Pagine e contenuti seguono l'ordine del menu: `1` Projects, `2` Results, `3`
   Team, `4` Join Us, `5` Sponsors, `6` About. La Home è `0`; il dettaglio Team
   condivide `P3` con la pagina Team; `C7-LAYOUT.ts` contiene menu e footer.

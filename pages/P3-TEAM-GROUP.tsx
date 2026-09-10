@@ -1,30 +1,16 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { DEPARTMENTS_INFO, TEAM_CONTENT, TEAM_STRUCTURE } from '../content/C3-TEAM';
+import { DEPARTMENTS_INFO, TEAM_CONTENT } from '../content/C3-TEAM';
 import { Reveal } from '../components/ui/Reveal';
 import Transition from '../components/Transition';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Mail, Linkedin } from 'lucide-react';
 import { TeamMember } from '../types';
 
-// Mappa gli id dei DEPARTMENTS_INFO ai titoli in TEAM_STRUCTURE
-const GROUP_ID_TO_TEAM: Record<string, string> = {
-  management: 'Management',
-  chassis: 'Chassis',
-  'mechanical-design': 'Mechanical Design',
-  strategy: 'Strategy',
-  electronics: 'Electronics',
-  aerodynamics: 'Aerodynamics',
-  'design-communication': 'Design & Communication',
-  'logistics-pr': 'Logistics & PR',
-};
-
 const TeamGroup: React.FC = () => {
   const { groupId } = useParams<{ groupId: string }>();
 
   const department = DEPARTMENTS_INFO.find((d) => d.id === groupId);
-  const teamTitle = groupId ? GROUP_ID_TO_TEAM[groupId] : undefined;
-  const teamDept = teamTitle ? TEAM_STRUCTURE.find((d) => d.title === teamTitle) : undefined;
 
   if (!department) {
     return (
@@ -76,9 +62,9 @@ const TeamGroup: React.FC = () => {
           </div>
 
           {/* Members Grid — split capi reparto e altri */}
-          {teamDept && teamDept.members.length > 0 ? (() => {
-            const capi = teamDept.members.filter(m => m.role === 'Capo Reparto');
-            const altri = teamDept.members.filter(m => m.role !== 'Capo Reparto');
+          {department.members.length > 0 ? (() => {
+            const capi = department.members.filter(m => m.role === 'Capo Reparto');
+            const altri = department.members.filter(m => m.role !== 'Capo Reparto');
             const renderCard = (member: TeamMember) => (
               <motion.div
                 key={`${member.name}-${member.surname}`}

@@ -31,4 +31,5 @@ export const PARTNERS: Partner[] = [
   { name: "RS", logo: sponsorLogo(18, "RS") },
   { name: "SmartCAE", logo: sponsorLogo(19, "SmartCAE") },
   { name: "Circuito Tazio Nuvolari", logo: sponsorLogo(20, "Circuito Tazio Nuvolari") },
+  { name: "Henkel (Loctite)", logo: sponsorLogo(21, "Henkel Loctite") },
 ];

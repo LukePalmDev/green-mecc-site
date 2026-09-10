@@ -1,5 +1,8 @@
 import { Vehicle } from '../types';
-import { asset } from '../utils/asset';
+import { numberedAsset } from '../utils/asset';
+
+const vehicleImage = (order: number, name: string) =>
+  numberedAsset('vehicles', 'V', order, name);
 
 export const PROJECTS_CONTENT = {
   titolo: "PROJECT",
@@ -10,7 +13,7 @@ export const VEHICLES: Vehicle[] = [
     id: "eros",
     name: "Eros",
     year: "2026",
-    image: asset("vehicles/M7-Eros.webp"),
+    image: vehicleImage(7, "Eros"),
     description: [
       "Urban Concept battery electric vehicle developed for the 2026 season.",
     ],
@@ -19,7 +22,7 @@ export const VEHICLES: Vehicle[] = [
     id: "asteria",
     name: "Asteria",
     year: "2022",
-    image: asset("vehicles/M6-Asteria-2026-photo.webp"),
+    image: vehicleImage(6, "Asteria"),
     description: [
       "Battery electric powered urban concept vehicle.",
       "Optimized chassis to minimize mass and maximize structural stiffness.",
@@ -31,7 +34,7 @@ export const VEHICLES: Vehicle[] = [
     id: "leto",
     name: "Leto",
     year: "2019",
-    image: asset("vehicles/M5-Leto.webp"),
+    image: vehicleImage(5, "Leto"),
     description: [
       "Urban Concept battery electric category.",
       "CFRP structure designed for stiffness and aerodynamics.",
@@ -42,7 +45,7 @@ export const VEHICLES: Vehicle[] = [
     id: "daphne",
     name: "Daphne",
     year: "2011",
-    image: asset("vehicles/M4-Daphne.webp"),
+    image: vehicleImage(4, "Daphne"),
     description: [
       "Urban Concept category.",
       "CFRP monocoque.",
@@ -54,7 +57,7 @@ export const VEHICLES: Vehicle[] = [
     id: "apollo",
     name: "Apollo",
     year: "2010",
-    image: asset("vehicles/M3-Apollo.webp"),
+    image: vehicleImage(3, "Apollo"),
     description: [
       "Powered by solar energy.",
       "Photovoltaic cell system installed on a wing body.",
@@ -66,7 +69,7 @@ export const VEHICLES: Vehicle[] = [
     id: "artemide",
     name: "Artemide",
     year: "2009",
-    image: asset("vehicles/M2-Artemide.webp"),
+    image: vehicleImage(2, "Artemide"),
     description: [
       "Powered by hydrogen fuel cell.",
       "Italian record for fuel cell prototypes (2741 km/l).",
@@ -77,7 +80,7 @@ export const VEHICLES: Vehicle[] = [
     id: "whynot",
     name: "Why Not?",
     year: "2005",
-    image: asset("vehicles/M1-WhyNot.webp"),
+    image: vehicleImage(1, "Why Not"),
     description: [
       "First Shell Eco-marathon vehicle by PoliMi.",
       "Trellis frame with aluminum tubes.",

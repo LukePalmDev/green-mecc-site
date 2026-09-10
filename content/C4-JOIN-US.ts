@@ -4,7 +4,7 @@
 export const JOINUS_CONTENT = {
   titolo: "JOIN US",
   occhiello:
-    "Turn what you study into something that actually moves. Green Mecc is open to students from every course at Politecnico di Milano.",
+    "Bring what you study beyond the classroom. Join Green Mecc and turn your skills, ideas and curiosity into a real vehicle built to compete.",
 
   intro: [
     "Joining the team is an incredible opportunity because it allows you to expand your theoretical knowledge and finally turn it into real-world practice. This is exactly what it takes to become a true engineer. You won't just be reading textbooks or memorizing formulas; you will be getting your hands dirty, tackling complex problems, and finding innovative solutions. By working on a tangible project, you will bridge the gap between academic concepts and actual manufacturing, shaping yourself into a complete, forward-thinking professional ready to build the future of mobility.",
@@ -18,14 +18,14 @@ export const JOINUS_CONTENT = {
   stato: {
     // Il sito passa automaticamente da "in apertura" ad "aperte" a questa data.
     // Impostare `chiuseManualmente: true` alla chiusura del recruiting.
-    aperturaIso: "2026-09-21T00:00:00+02:00",
+    aperturaIso: "2026-09-14T00:00:00+02:00",
     chiuseManualmente: false,
     titoloSezione: "Application status",
-    etichettaInArrivo: "Applications open on 21 September",
+    etichettaInArrivo: "Applications open on 14 September",
     etichettaAperte: "Applications open",
     etichettaChiuse: "Applications closed",
     testoInArrivo:
-      "Recruiting opens on 21 September. The selection starts with a written test on 12 October, followed by an oral interview for candidates who pass it.",
+      "Recruiting opens on 14 September. The selection starts with a written test on 12 October, followed by an oral interview for candidates who pass it.",
     testoAperte:
       "Recruiting is open. The selection starts with a written test on 12 October, followed by an oral interview for candidates who pass it.",
     testoChiuse:
@@ -86,32 +86,32 @@ export const JOINUS_CONTENT = {
       {
         domanda: "Who can join the team?",
         risposta:
-          "Any student enrolled at Politecnico di Milano can apply, whether they are studying for a Bachelor's or a Master's degree.",
+          "Any student currently enrolled at Politecnico di Milano can apply, regardless of their degree programme or year of study.",
       },
       {
         domanda: "Do I need previous experience?",
         risposta:
-          "Previous experience is not required. We value willingness to learn and get involved, although relevant experience is welcome and can be an advantage.",
+          "No previous experience is required. What matters most is curiosity, commitment and a willingness to learn and get involved. Relevant skills or previous experience are always welcome, but they are not essential.",
       },
       {
         domanda: "When does the next recruiting round open?",
         risposta:
-          "The next recruiting round opens on 21 September.",
+          "Applications for the next recruiting round will open on 14 September. Stay tuned to our website and social media channels for further information.",
       },
       {
         domanda: "How does the selection process work?",
         risposta:
-          "The selection consists of a written test on 12 October and an oral interview for candidates who pass the written test.",
+          "The selection process consists of a written test on 12 October and an oral interview with members of the team for candidates who pass the written test. It is an opportunity to get to know you and talk about your interests.",
       },
       {
         domanda: "How much time does the team require?",
         risposta:
-          "Usually a few hours per week, depending on the period and the activities underway.",
+          "The time commitment varies throughout the year depending on ongoing projects and deadlines. On average, members dedicate around two hours per week to team activities.",
       },
       {
         domanda: "When and where does the team work?",
         risposta:
-          "Schedules and locations depend on the department. Activities usually take place in the office, in the workshop or independently from home.",
+          "Working hours depend on the department and the activities underway. Most activities take place in our office and mechanical workshop in Building B6, while some tasks can also be carried out independently from home.",
       },
     ],
   },

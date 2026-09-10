@@ -8,19 +8,16 @@ Aggiornato il 10 settembre 2026.
   voluto. Il collegamento è inserito, ma per un visitatore non autenticato il
   form reindirizza oggi alla schermata di login Google.
 - Fornire la data di chiusura del recruiting. Per ora il sito apre
-  automaticamente le candidature il 21 settembre 2026 e resta aperto finché
+  automaticamente le candidature il 14 settembre 2026 e resta aperto finché
   `chiuseManualmente` non viene impostato su `true`.
-- Confermare che apertura (21 settembre) e test scritto (12 ottobre) si
-  riferiscano al 2026. Il sito non mostra l'anno, ma l'apertura automatica usa il
-  2026.
 - Facoltativo: aggiungere orario, luogo e argomenti del test scritto, se si
   desidera pubblicarli.
 
 ## Team
 
-- Fornire le copertine mancanti dei reparti Aerodynamics e Logistics & PR. I
-  membri e le loro foto sono presenti, ma per ora nella pagina Team restano le
-  due immagini di reparto precedenti.
+- Fornire la copertina definitiva del reparto Logistics & PR. Aerodynamics usa
+  ora la nuova fotografia ricevuta; Logistics & PR mantiene temporaneamente la
+  precedente fotografia di gruppo.
 - Confermare se Irene Marchetti debba essere indicata come Team Leader o con un
   altro ruolo: nel materiale ricevuto il suo file non contiene l'indicazione
   “capo”, quindi il sito la mostra senza ruolo.
@@ -36,6 +33,10 @@ Aggiornato il 10 settembre 2026.
 
 ## Sponsor
 
+- Ricevere nome e file del nuovo sponsor indicato tramite un URL `blob:` di
+  WhatsApp. Quel collegamento e' valido soltanto nel browser del mittente e non
+  permette di recuperare il logo; serve allegare il file o indicarne il percorso
+  locale.
 - Fornire, se si vogliono rendere cliccabili tutte le schede, gli URL ufficiali
   degli sponsor che non avevano un link già verificato nel progetto. In assenza
   di URL la scheda mostra correttamente il logo senza puntare a `#`.
@@ -46,3 +47,13 @@ Aggiornato il 10 settembre 2026.
   funziona, ma la console segnala che per la produzione sarebbe preferibile
   compilare Tailwind localmente con PostCSS o CLI. Questa migrazione va trattata
   separatamente perché modifica dipendenze e pipeline CSS dell'intero sito.
+- Per il prossimo cambio completo della squadra, valutare un unico file CSV con
+  reparto, ordine, nome, cognome, ruolo, email e LinkedIn. L'importazione batch
+  prepara gia' tutte le fotografie, ma i dati delle persone vengono ancora
+  aggiornati manualmente in `content/C3-TEAM.ts`.
+- Quattro persone compaiono oggi in due reparti e usano due copie identiche
+  della stessa foto. Se i casi aumentano, conviene introdurre un archivio unico
+  delle persone e collegare ciascuna persona a uno o più reparti.
+- Aggiungere in CI un controllo visivo automatico delle pagine principali con
+  screenshot desktop e mobile. I controlli correnti coprono nomi, associazione
+  membri/foto, TypeScript e build.
