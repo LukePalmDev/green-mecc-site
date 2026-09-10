@@ -79,28 +79,39 @@ const TeamGroup: React.FC = () => {
           {teamDept && teamDept.members.length > 0 ? (() => {
             const capi = teamDept.members.filter(m => m.role === 'Capo Reparto');
             const altri = teamDept.members.filter(m => m.role !== 'Capo Reparto');
-            const renderCard = (member: TeamMember, i: number) => (
+            const renderCard = (member: TeamMember) => (
               <motion.div
-                key={i}
+                key={`${member.name}-${member.surname}`}
                 whileHover={{ y: -10 }}
                 className="group relative bg-stone-200 dark:bg-black/40 rounded-xl overflow-hidden"
               >
-                <div className="aspect-[4/3] overflow-hidden relative">
+                <div className="aspect-[3/4] overflow-hidden relative">
                   <img
                     src={member.image}
                     alt={`${member.name} ${member.surname}`}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
                   />
-                  <div className="absolute inset-0 bg-green-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                    {member.email && (
-                      <a href={`mailto:${member.email}`} className="p-2 bg-white rounded-full text-green-900 hover:scale-110 transition-transform">
-                        <Mail size={20} />
-                      </a>
-                    )}
-                    <a href="#" className="p-2 bg-white rounded-full text-green-900 hover:scale-110 transition-transform">
-                      <Linkedin size={20} />
-                    </a>
-                  </div>
+                  {(member.email || member.linkedin) && (
+                    <div className="absolute inset-0 bg-green-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                      {member.email && (
+                        <a href={`mailto:${member.email}`} className="p-2 bg-white rounded-full text-green-900 hover:scale-110 transition-transform">
+                          <Mail size={20} />
+                        </a>
+                      )}
+                      {member.linkedin && (
+                        <a
+                          href={member.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`LinkedIn di ${member.name} ${member.surname}`}
+                          className="p-2 bg-white rounded-full text-green-900 hover:scale-110 transition-transform"
+                        >
+                          <Linkedin size={20} />
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
                 <div className="p-4 border-t border-stone-300 dark:border-white/10">
                   <h4 className="font-display font-bold text-lg text-stone-900 dark:text-white uppercase">{member.surname}</h4>

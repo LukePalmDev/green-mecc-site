@@ -7,10 +7,19 @@ export const PROJECTS_CONTENT = {
 
 export const VEHICLES: Vehicle[] = [
   {
+    id: "eros",
+    name: "Eros",
+    year: "2026",
+    image: asset("vehicles/M7-Eros.webp"),
+    description: [
+      "Urban Concept battery electric vehicle developed for the 2026 season.",
+    ],
+  },
+  {
     id: "asteria",
     name: "Asteria",
     year: "2022",
-    image: asset("vehicles/M6-Asteria.webp"),
+    image: asset("vehicles/M6-Asteria-2026-photo.webp"),
     description: [
       "Battery electric powered urban concept vehicle.",
       "Optimized chassis to minimize mass and maximize structural stiffness.",

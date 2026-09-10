@@ -59,6 +59,7 @@ const Team: React.FC = () => {
                   <img
                     src={dept.image}
                     alt={dept.title}
+                    loading="lazy"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>

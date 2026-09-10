@@ -31,7 +31,7 @@ const Results: React.FC = () => {
                         {/* Card Content */}
                         <div className="md:col-span-4 bg-stone-100 dark:bg-white/5 rounded-2xl overflow-hidden hover:bg-stone-200 dark:hover:bg-white/10 transition-colors border border-stone-300 dark:border-white/5">
                             <div className="aspect-video w-full overflow-hidden">
-                                <img src={res.image} alt={res.competition} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                <img src={res.image} alt={res.competition} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                             </div>
                             <div className="p-8">
                                 <div className="md:hidden mb-4">

@@ -7,6 +7,15 @@ export const RESULTS_CONTENT = {
 
 export const RESULTS: Result[] = [
   {
+    year: "2026",
+    competition: "Shell Eco-marathon Europe",
+    location: "Silesia Ring, Kamień Śląski, Poland",
+    vehicle: "Eros",
+    category: "Urban concept, battery electric",
+    result: "2nd place in the Innovation Award, 3rd place in the on-track efficiency competition and qualification for the 2027 Global Championship",
+    image: asset("result/R6-2026.webp"),
+  },
+  {
     year: "2024",
     competition: "Shell Eco-marathon Europe",
     location: "Circuit Paul Armagnac, Nogaro, FR",

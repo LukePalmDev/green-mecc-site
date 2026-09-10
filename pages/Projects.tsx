@@ -38,6 +38,7 @@ const Projects: React.FC = () => {
                     <img
                       src={car.image}
                       alt={car.name}
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
