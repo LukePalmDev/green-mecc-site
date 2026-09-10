@@ -25,9 +25,9 @@ export const JOINUS_CONTENT = {
     etichettaAperte: "Applications open",
     etichettaChiuse: "Applications closed",
     testoInArrivo:
-      "Recruiting opens on 14 September. The selection starts with a written test on 12 October, followed by an oral interview for candidates who pass it.",
+      "Recruiting opens on 14 September. The selection starts with a written test on 12th October, followed by an oral interview for candidates who pass it.",
     testoAperte:
-      "Recruiting is open. The selection starts with a written test on 12 October, followed by an oral interview for candidates who pass it.",
+      "Recruiting is open. The selection starts with a written test on 12th October, followed by an oral interview for candidates who pass it.",
     testoChiuse:
       "Applications are currently closed. Follow our social channels to hear about the next recruiting round.",
     cta: {
@@ -48,7 +48,7 @@ export const JOINUS_CONTENT = {
       {
         titolo: "The written test",
         testo:
-          "The first stage is a written test on 12 October. It allows us to assess your skills, motivation and potential.",
+          "The first stage is a written test on 12th October. It allows us to assess your skills, motivation and potential.",
       },
       {
         titolo: "The interview",
@@ -101,7 +101,7 @@ export const JOINUS_CONTENT = {
       {
         domanda: "How does the selection process work?",
         risposta:
-          "The selection process consists of a written test on 12 October and an oral interview with members of the team for candidates who pass the written test. It is an opportunity to get to know you and talk about your interests.",
+          "The selection process consists of a written test on 12th October and an oral interview with members of the team for candidates who pass the written test. It is an opportunity to get to know you and talk about your interests.",
       },
       {
         domanda: "How much time does the team require?",
