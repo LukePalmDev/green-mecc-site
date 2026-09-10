@@ -32,4 +32,5 @@ export const PARTNERS: Partner[] = [
   { name: "SmartCAE", logo: sponsorLogo(19, "SmartCAE") },
   { name: "Circuito Tazio Nuvolari", logo: sponsorLogo(20, "Circuito Tazio Nuvolari") },
   { name: "Henkel (Loctite)", logo: sponsorLogo(21, "Henkel Loctite") },
+  { name: "CERATIZIT Group", logo: sponsorLogo(22, "Ceratizit Group") },
 ];

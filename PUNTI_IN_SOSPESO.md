@@ -33,10 +33,6 @@ Aggiornato il 10 settembre 2026.
 
 ## Sponsor
 
-- Ricevere nome e file del nuovo sponsor indicato tramite un URL `blob:` di
-  WhatsApp. Quel collegamento e' valido soltanto nel browser del mittente e non
-  permette di recuperare il logo; serve allegare il file o indicarne il percorso
-  locale.
 - Fornire, se si vogliono rendere cliccabili tutte le schede, gli URL ufficiali
   degli sponsor che non avevano un link già verificato nel progetto. In assenza
   di URL la scheda mostra correttamente il logo senza puntare a `#`.

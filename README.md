@@ -38,7 +38,7 @@ Gli asset della stagione 2026 sono organizzati così:
 - `public/general/`: immagini generali di Home e Albo;
 - `public/team/covers/`: copertine numerate dei reparti;
 - `public/team/members/`: foto numerate dei membri, suddivise per reparto;
-- `public/sponsor/`: i 21 loghi della lista sponsor aggiornata;
+- `public/sponsor/`: i 22 loghi della lista sponsor aggiornata;
 - `public/vehicles/V7-EROS.webp`: Eros 2026;
 - `public/results/R6-2026.webp`: foto del risultato 2026.
 
