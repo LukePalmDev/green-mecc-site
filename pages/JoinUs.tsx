@@ -10,10 +10,22 @@ import Transition from '../components/Transition';
 const JoinUs: React.FC = () => {
   const { titolo, occhiello, intro, stato, fasi, reparti, ctaFinale, faq } = JOINUS_CONTENT;
 
-  // Finche' il link di candidatura non e' configurato, il pulsante resta inerte:
-  // meglio un bottone spento che una scheda vuota in faccia a chi vuole candidarsi.
+  const candidatureAperte =
+    !stato.chiuseManualmente && Date.now() >= Date.parse(stato.aperturaIso);
+  const candidatureInArrivo =
+    !stato.chiuseManualmente && !candidatureAperte;
   const linkCandidaturaPronto = stato.cta.url.trim() !== '' && stato.cta.url.trim() !== '#';
-  const mostraCta = stato.aperte && linkCandidaturaPronto;
+  const mostraCta = candidatureAperte && linkCandidaturaPronto;
+  const etichettaStato = candidatureInArrivo
+    ? stato.etichettaInArrivo
+    : candidatureAperte
+      ? stato.etichettaAperte
+      : stato.etichettaChiuse;
+  const testoStato = candidatureInArrivo
+    ? stato.testoInArrivo
+    : candidatureAperte
+      ? stato.testoAperte
+      : stato.testoChiuse;
 
   return (
     <Transition>
@@ -52,21 +64,21 @@ const JoinUs: React.FC = () => {
                 {/* Pallino di stato: verde pieno se aperte, grigio se chiuse */}
                 <div className="flex items-center gap-3 mb-4">
                   <span className="relative flex h-3 w-3">
-                    {stato.aperte && (
+                    {candidatureAperte && (
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-900 opacity-75" />
                     )}
                     <span
                       className={`relative inline-flex rounded-full h-3 w-3 ${
-                        stato.aperte ? 'bg-emerald-900' : 'bg-stone-400 dark:bg-gray-600'
+                        candidatureAperte ? 'bg-emerald-900' : 'bg-stone-400 dark:bg-gray-600'
                       }`}
                     />
                   </span>
                   <span className="font-display font-bold text-2xl md:text-3xl">
-                    {stato.aperte ? stato.etichettaAperte : stato.etichettaChiuse}
+                    {etichettaStato}
                   </span>
                 </div>
                 <p className="text-stone-600 dark:text-gray-400 text-base md:text-lg font-light leading-relaxed max-w-2xl">
-                  {stato.aperte ? stato.testoAperte : stato.testoChiuse}
+                  {testoStato}
                 </p>
               </div>
 

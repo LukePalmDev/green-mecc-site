@@ -56,6 +56,10 @@ const Navbar: React.FC = () => {
           <div className="md:hidden pointer-events-auto">
             <button
               onClick={toggleMenu}
+              type="button"
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation"
               className="inline-flex items-center justify-center p-3 rounded-full bg-white/80 dark:bg-black/20 backdrop-blur-md border border-stone-300 dark:border-white/10 text-stone-900 dark:text-white hover:text-emerald-900 transition-colors"
             >
               {isOpen ? <X size={20} /> : <Menu size={20} />}
@@ -68,6 +72,7 @@ const Navbar: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id="mobile-navigation"
             initial={{ opacity: 0, clipPath: "circle(0% at 100% 0)" }}
             animate={{ opacity: 1, clipPath: "circle(150% at 100% 0)" }}
             exit={{ opacity: 0, clipPath: "circle(0% at 100% 0)" }}

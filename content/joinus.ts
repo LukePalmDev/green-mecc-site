@@ -1,23 +1,5 @@
-// =============================================================================
-// PAGINA JOIN US  ->  /join-us
-// =============================================================================
-//
-//  ATTENZIONE — PRIMA DI PUBBLICARE
-//  Questa pagina contiene SEGNAPOSTO da sostituire. Cerca la parola PLACEHOLDER
-//  in questo file: ogni occorrenza va sostituita con il testo definitivo.
-//
-//  In attesa di risposta:
-//    1. Come ci si candida (link a un form? una email? solo test in presenza?)
-//       -> campo `stato.cta.url`
-//    2. Quante fasi ha la selezione (2 o 3?)
-//       -> array `fasi.tappe`: aggiungi o togli una voce, il layout si adatta
-//    3. Le sei risposte delle FAQ
-//       -> array `faq.voci`
-//
-//  Finche' i segnaposto sono qui, NON fare push su main:
-//  ogni commit su main pubblica il sito in automatico.
-//
-// =============================================================================
+// Pagina Join Us -> /join-us
+// Le informazioni ancora da confermare sono raccolte in PUNTI_IN_SOSPESO.md.
 
 export const JOINUS_CONTENT = {
   titolo: "JOIN US",
@@ -34,18 +16,23 @@ export const JOINUS_CONTENT = {
   // automaticamente il messaggio di chiusura al posto del pulsante.
   // ---------------------------------------------------------------------------
   stato: {
-    aperte: true,
+    // Il sito passa automaticamente da "in apertura" ad "aperte" a questa data.
+    // Impostare `chiuseManualmente: true` alla chiusura del recruiting.
+    aperturaIso: "2026-09-21T00:00:00+02:00",
+    chiuseManualmente: false,
     titoloSezione: "Application status",
+    etichettaInArrivo: "Applications open on 21 September",
     etichettaAperte: "Applications open",
     etichettaChiuse: "Applications closed",
+    testoInArrivo:
+      "Recruiting opens on 21 September. The selection starts with a written test on 12 October, followed by an oral interview for candidates who pass it.",
     testoAperte:
-      "The recruiting phase will take place in October. The selection process consists of a written test, followed by an oral interview for those who pass the first stage.",
+      "Recruiting is open. The selection starts with a written test on 12 October, followed by an oral interview for candidates who pass it.",
     testoChiuse:
-      "PLACEHOLDER — Lorem ipsum dolor sit amet, consectetur adipiscing elit. Applications are currently closed: follow our social channels to be notified when the next recruiting round opens.",
+      "Applications are currently closed. Follow our social channels to hear about the next recruiting round.",
     cta: {
       testo: "Apply now",
-      // PLACEHOLDER — sostituire con il link al form di candidatura,
-      // oppure con "mailto:sem-dmec@polimi.it" se si procede via email.
+      // Il pulsante resta nascosto finche' non viene fornito il form ufficiale.
       url: "#",
     },
   },
@@ -62,12 +49,12 @@ export const JOINUS_CONTENT = {
       {
         titolo: "The written test",
         testo:
-          "PLACEHOLDER — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. The written test lets us assess your skills and your potential.",
+          "The first stage is a written test on 12 October. It allows us to assess your skills, motivation and potential.",
       },
       {
         titolo: "The interview",
         testo:
-          "PLACEHOLDER — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Candidates who pass the written test are invited to an individual oral interview with the heads of the department they applied for.",
+          "Candidates who pass the written test are invited to an oral interview with the heads of the department they applied for.",
       },
     ],
   },
@@ -85,13 +72,13 @@ export const JOINUS_CONTENT = {
   ctaFinale: {
     titolo: "Put your skills to work",
     testo:
-      "PLACEHOLDER — Lorem ipsum dolor sit amet, consectetur adipiscing elit. Every season starts with a new group of students.",
+      "Every season starts with students who are ready to learn, contribute and turn ideas into a working vehicle.",
     bottonePrimario: "Apply now",
     bottoneSecondario: "Discover the departments",
   },
 
   // ---------------------------------------------------------------------------
-  // FAQ — tutte le risposte sono da scrivere.
+  // FAQ
   // ---------------------------------------------------------------------------
   faq: {
     titolo: "Frequently asked questions",
@@ -100,34 +87,32 @@ export const JOINUS_CONTENT = {
       {
         domanda: "Who can join the team?",
         risposta:
-          "PLACEHOLDER — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "Any student enrolled at Politecnico di Milano can apply, whether they are studying for a Bachelor's or a Master's degree.",
       },
       {
         domanda: "Do I need previous experience?",
         risposta:
-          "PLACEHOLDER — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "Previous experience is not required. We value willingness to learn and get involved, although relevant experience is welcome and can be an advantage.",
       },
       {
         domanda: "When does the next recruiting round open?",
         risposta:
-          "PLACEHOLDER — Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+          "The next recruiting round opens on 21 September.",
       },
       {
         domanda: "How does the selection process work?",
         risposta:
-          "PLACEHOLDER — Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "The selection consists of a written test on 12 October and an oral interview for candidates who pass the written test.",
       },
       {
         domanda: "How much time does the team require?",
         risposta:
-          "PLACEHOLDER — Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+          "Usually a few hours per week, depending on the period and the activities underway.",
       },
       {
-        // Questa e' l'unica risposta ricavata da dati gia' presenti sul sito
-        // (l'indirizzo nel footer). Da confermare comunque.
-        domanda: "Where do you work?",
+        domanda: "When and where does the team work?",
         risposta:
-          "PLACEHOLDER — Our base is at Politecnico di Milano, Via Candiani 72, 20158 Milano. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "Schedules and locations depend on the department. Activities usually take place in the office, in the workshop or independently from home.",
       },
     ],
   },

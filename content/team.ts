@@ -24,7 +24,7 @@ export const TEAM_CONTENT = {
   rimandoJoinUs: {
     titolo: "JOIN US",
     testo:
-      "Recruiting opens in October. Find out how the selection works and which department fits you best.",
+      "Recruiting opens on 21 September. Find out how the selection works and which department fits you best.",
     link: "Go to Join Us",
   },
 };

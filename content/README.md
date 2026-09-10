@@ -42,7 +42,13 @@ description: [
 Per aggiungere un paragrafo, copia una riga e cambiane il testo, tenendo la
 virgola finale.
 
-## Segnaposto da sostituire
+## Recruiting e pagina Join Us
 
-Il file `joinus.ts` contiene testi provvisori marcati con la parola
-PLACEHOLDER. Vanno tutti sostituiti prima di pubblicare la pagina Join Us.
+Il file `joinus.ts` contiene la data di apertura del recruiting, le due fasi di
+selezione e le FAQ. Lo stato passa automaticamente ad "Applications open" alla
+data indicata in `aperturaIso`. Alla chiusura, imposta `chiuseManualmente` su
+`true`.
+
+Il pulsante "Apply now" compare solo se le candidature sono aperte e
+`stato.cta.url` contiene un link valido. Le informazioni ancora da confermare
+sono elencate in `PUNTI_IN_SOSPESO.md` nella radice del progetto.

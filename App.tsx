@@ -93,16 +93,18 @@ const AnimatedRoutes = () => {
     
     return (
         <AnimatePresence mode="wait">
-            <Routes location={location} key={location.pathname}>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/team" element={<Team />} />
-                <Route path="/team/:groupId" element={<TeamGroup />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/results" element={<Results />} />
-                <Route path="/join-us" element={<JoinUs />} />
-                <Route path="/sponsors" element={<Sponsors />} />
-            </Routes>
+            <React.Fragment key={location.pathname}>
+                <Routes location={location}>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/team" element={<Team />} />
+                    <Route path="/team/:groupId" element={<TeamGroup />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/results" element={<Results />} />
+                    <Route path="/join-us" element={<JoinUs />} />
+                    <Route path="/sponsors" element={<Sponsors />} />
+                </Routes>
+            </React.Fragment>
         </AnimatePresence>
     );
 };
