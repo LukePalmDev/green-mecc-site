@@ -4,9 +4,9 @@ Aggiornato il 10 settembre 2026.
 
 ## Recruiting
 
-- Fornire il link ufficiale o la modalità di candidatura. Finché
-  `content/joinus.ts > stato.cta.url` resta `#`, il pulsante “Apply now” è
-  volutamente nascosto.
+- Verificare che l'accesso Google obbligatorio al form di candidatura sia
+  voluto. Il collegamento è inserito, ma per un visitatore non autenticato il
+  form reindirizza oggi alla schermata di login Google.
 - Fornire la data di chiusura del recruiting. Per ora il sito apre
   automaticamente le candidature il 21 settembre 2026 e resta aperto finché
   `chiuseManualmente` non viene impostato su `true`.

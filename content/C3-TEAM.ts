@@ -1,8 +1,11 @@
 import { Department } from '../types';
-import { asset } from '../utils/asset';
+import { asset, numberedAsset } from '../utils/asset';
 
 const memberImage = (department: string, fileName: string) =>
   asset(`team/members/${department}/${fileName}.webp`);
+
+const departmentIcon = (order: number, name: string) =>
+  numberedAsset('departments', 'D', order, name, 'svg', 'lower');
 
 export const TEAM_CONTENT = {
   titolo: "TEAM",
@@ -20,7 +23,7 @@ export const TEAM_CONTENT = {
     immagine: asset("T0-Albo.jpg"),
     testoAlternativoImmagine: "Albo Green Mecc",
   },
-  // Il testo completo di Join Us vive ora in content/joinus.ts (pagina /join-us).
+  // Il testo completo di Join Us vive ora in C4-JOIN-US.ts (pagina /join-us).
   // Qui resta solo il rimando che chiude la pagina Team.
   rimandoJoinUs: {
     titolo: "JOIN US",
@@ -34,7 +37,7 @@ export const DEPARTMENTS_INFO = [
   {
     id: "management",
     title: "Management",
-    icon: asset("departments/management-3.svg"),
+    icon: departmentIcon(6, "management"),
     image: asset("team/covers/management.webp"),
     description: [
       "The main task is to manage and coordinate the work of all team members. Every year, the seasonal objectives are established, and the team is formed. Experience gained over many seasons is the basis for success.",
@@ -43,7 +46,7 @@ export const DEPARTMENTS_INFO = [
   {
     id: "chassis",
     title: "Chassis",
-    icon: asset("departments/chassis.svg"),
+    icon: departmentIcon(3, "chassis"),
     image: asset("team/covers/chassis.webp"),
     description: [
       "The Chassis Department is responsible for the design, structural analysis, and manufacturing of our vehicle's chassis. Our goal is to reduce the vehicle’s weight to minimize energy consumption while maintaining high stiffness and ensuring protection for the driver. We also design all removable body parts such as the doors, the bonnet and the trunk. We work with carbon composite materials, for which we also produce the moulds. Our workflow encompasses surface modelling of the components, structural optimizations and hands-on lamination of the chassis and the other carbon fiber parts.",
@@ -52,7 +55,7 @@ export const DEPARTMENTS_INFO = [
   {
     id: "mechanical-design",
     title: "Mechanical Design",
-    icon: asset("departments/engineering.svg"),
+    icon: departmentIcon(5, "engineering"),
     image: asset("team/covers/mechanical-design.webp"),
     description: [
       "The mechanical design department is responsible for the technical development of the vehicle, from defining design solutions to manufacturing the components. Activities include CAD design, the integration of mechanical and electrical systems, weight and efficiency optimization, the validation of technical solutions, and support for the production and assembly of the prototype.",
@@ -61,8 +64,9 @@ export const DEPARTMENTS_INFO = [
   {
     id: "strategy",
     title: "Strategy",
-    icon: asset("departments/circuit.svg"),
+    icon: departmentIcon(4, "circuit"),
     image: asset("team/covers/strategy.webp"),
+    coverNeedsZoom: true,
     description: [
       "The department develops virtual vehicle and circuit modeling using MATLAB and SIMULINK, facilitating the identification of optimized driving paradigms designed to drive down fuel consumption and streamline overall performance efficiency.",
     ],
@@ -70,7 +74,7 @@ export const DEPARTMENTS_INFO = [
   {
     id: "electronics",
     title: "Electronics",
-    icon: asset("departments/circuit.svg"),
+    icon: departmentIcon(4, "circuit"),
     image: asset("team/covers/electronics.webp"),
     description: [
       "Responsible for the design, development, and integration of the vehicle’s electrical architecture and control systems. The process includes custom PCB engineering and power management for the powertrain, alongside the implementation of real-time data acquisition, sensor fusion, and telemetry for performance optimization.",
@@ -79,7 +83,7 @@ export const DEPARTMENTS_INFO = [
   {
     id: "aerodynamics",
     title: "Aerodynamics",
-    icon: asset("departments/aerodynamic.svg"),
+    icon: departmentIcon(1, "aerodynamic"),
     image: asset("mission/T2-AERODYNAMICS.jpg"),
     description: [
       "Study and optimization of the car's aerodynamics to minimize drag. Through CFD simulations and the analysis of innovative solutions, the department defines the vehicle's external shape, validating the results through track tests to ensure maximum energy efficiency.",
@@ -88,7 +92,7 @@ export const DEPARTMENTS_INFO = [
   {
     id: "design-communication",
     title: "Design & Communication",
-    icon: asset("departments/bullhorn-2.svg"),
+    icon: departmentIcon(2, "bullhorn"),
     image: asset("team/covers/design-communication.webp"),
     description: [
       "Responsible for defining and managing the team’s visual identity and communication strategy across digital and physical platforms. The department handles social media content production (photography, video, and motion graphics), develops official merchandise, designs graphic and presentation materials, and creates the vehicle livery, ensuring a consistent and cohesive team identity.",
@@ -97,7 +101,7 @@ export const DEPARTMENTS_INFO = [
   {
     id: "logistics-pr",
     title: "Logistics & PR",
-    icon: asset("departments/structure.svg"),
+    icon: departmentIcon(7, "structure"),
     image: asset("T7-ACADEMIC SUPERVISOR.jpg"),
     description: [
       "The Logistics & PR department plays a dual role within the Green Mecc Team.",

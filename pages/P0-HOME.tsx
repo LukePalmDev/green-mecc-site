@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import Transition from '../components/Transition';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
-import { HOME_CONTENT } from '../content/home';
+import { HOME_CONTENT } from '../content/C0-HOME';
 
 const Home: React.FC = () => {
   const containerRef = useRef(null);

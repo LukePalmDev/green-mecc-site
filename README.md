@@ -18,13 +18,14 @@ Il server locale usa normalmente `http://localhost:6831/green-mecc-site/`.
 
 ```bash
 npm run typecheck
+npm run check:naming
 npm run build
 # oppure entrambi
 npm run check
 ```
 
-Il typecheck viene eseguito anche dalla GitHub Action prima del build e del
-deploy.
+`npm run check` verifica nomenclatura, tipi e build. Gli stessi controlli
+vengono eseguiti dalla GitHub Action prima del deploy.
 
 ## Contenuti
 
@@ -35,7 +36,7 @@ Gli asset della stagione 2026 sono organizzati così:
 
 - `public/team/covers/`: copertine dei reparti;
 - `public/team/members/`: foto dei membri, suddivise per reparto;
-- `public/sponsor/2026/`: i 20 loghi della lista sponsor aggiornata;
+- `public/sponsor/`: i 20 loghi della lista sponsor aggiornata;
 - `public/vehicles/M7-Eros.webp`: Eros 2026;
 - `public/result/R6-2026.webp`: foto del risultato 2026.
 
@@ -44,7 +45,31 @@ versionati: nel repository restano solo le versioni WebP ottimizzate per il web.
 
 La pagina recruiting è raggiungibile all'hash route `#/join-us`. La sua data di
 apertura, le fasi, le FAQ e il futuro link di candidatura sono in
-`content/joinus.ts`.
+`content/C4-JOIN-US.ts`.
+
+## Convenzione dei nomi
+
+I file che corrispondono alle voci del menu seguono lo stesso ordine numerico:
+
+1. Projects
+2. Results
+3. Team
+4. Join Us
+5. Sponsors
+6. About
+
+La Home usa il numero `0`; la pagina di dettaglio di un reparto condivide il
+numero `3` con Team. I contenuti usano il prefisso `C`, le pagine `P`, le icone
+dei reparti `D` e i loghi sponsor `S`. Esempi:
+
+- `content/C1-PROJECTS.ts`;
+- `pages/P3-TEAM-GROUP.tsx`;
+- `public/departments/D2-bullhorn.svg`;
+- `public/sponsor/S5-BREMBO.webp`.
+
+Per gli asset numerati usare `numberedAsset()` in `utils/asset.ts`: il percorso
+viene costruito dalla posizione e dal nome, senza duplicare il filename nei file
+dei contenuti.
 
 ## Pubblicazione
 

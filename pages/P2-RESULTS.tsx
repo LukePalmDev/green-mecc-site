@@ -1,5 +1,5 @@
 import React from 'react';
-import { RESULTS_CONTENT, RESULTS } from '../content/results';
+import { RESULTS_CONTENT, RESULTS } from '../content/C2-RESULTS';
 import { Reveal } from '../components/ui/Reveal';
 import Transition from '../components/Transition';
 import { Trophy, MapPin, Car } from 'lucide-react';

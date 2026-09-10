@@ -1,7 +1,7 @@
 import React from 'react';
 import { Reveal } from '../components/ui/Reveal';
 import Transition from '../components/Transition';
-import { ABOUT_CONTENT } from '../content/about';
+import { ABOUT_CONTENT } from '../content/C6-ABOUT';
 
 const About: React.FC = () => {
   return (

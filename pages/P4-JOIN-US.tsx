@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
-import { JOINUS_CONTENT } from '../content/joinus';
-import { DEPARTMENTS_INFO } from '../content/team';
+import { JOINUS_CONTENT } from '../content/C4-JOIN-US';
+import { DEPARTMENTS_INFO } from '../content/C3-TEAM';
 import { Reveal } from '../components/ui/Reveal';
 import { Accordion } from '../components/ui/Accordion';
 import Transition from '../components/Transition';

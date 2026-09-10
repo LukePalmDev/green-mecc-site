@@ -1,5 +1,5 @@
 import React from 'react';
-import { PROJECTS_CONTENT, VEHICLES } from '../content/projects';
+import { PROJECTS_CONTENT, VEHICLES } from '../content/C1-PROJECTS';
 import { Reveal } from '../components/ui/Reveal';
 import Transition from '../components/Transition';
 

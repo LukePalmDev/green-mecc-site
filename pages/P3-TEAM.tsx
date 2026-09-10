@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { DEPARTMENTS_INFO, TEAM_CONTENT } from '../content/team';
+import { DEPARTMENTS_INFO, TEAM_CONTENT } from '../content/C3-TEAM';
 import { Reveal } from '../components/ui/Reveal';
 import Transition from '../components/Transition';
 import { ArrowUpRight } from 'lucide-react';
@@ -60,7 +60,11 @@ const Team: React.FC = () => {
                     src={dept.image}
                     alt={dept.title}
                     loading="lazy"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                    className={`w-full h-full object-cover transition-transform duration-700 ${
+                      dept.coverNeedsZoom
+                        ? 'scale-[1.6] hover:scale-[1.7]'
+                        : 'hover:scale-105'
+                    }`}
                   />
                 </div>
               </div>

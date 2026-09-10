@@ -12,19 +12,27 @@
 
 ## Regole di modifica
 
-- Mantieni testi e dati editoriali nei file `content/*.ts`.
+- Mantieni testi e dati editoriali nei file `content/C*.ts`.
 - Usa `utils/asset.ts` per gli asset in `public/`, così il base path di GitHub
   Pages resta corretto.
 - Mantieni le route nel formato hash (`#/...`) e aggiungi le voci di navigazione
-  in `content/layout.ts`.
+  in `content/C7-LAYOUT.ts`.
 - Conserva lo stile, il responsive design, il tema chiaro/scuro e
   l'accessibilità dei componenti esistenti.
 - Non inventare dati mancanti: annotali in `PUNTI_IN_SOSPESO.md`.
 - Salva le foto dei membri in `public/team/members/<id-reparto>/` e le
-  copertine in `public/team/covers/`; in `content/team.ts` assegna il ruolo
+  copertine in `public/team/covers/`; in `content/C3-TEAM.ts` assegna il ruolo
   `Capo Reparto` solo alle persone esplicitamente marcate come capo nella fonte.
-- I loghi della stagione corrente sono in `public/sponsor/2026/`. Se un logo
-  nasce per uno sfondo scuro, usa `surface: "dark"` in `content/sponsors.ts`.
+- I loghi sponsor sono direttamente in `public/sponsor/` e si chiamano
+  `S<ordine>-<NOME>.webp`, con il nome in maiuscolo e senza altri numeri. Se un
+  logo nasce per uno sfondo scuro, usa `surface: "dark"` in
+  `content/C5-SPONSORS.ts`.
+- Le icone in `public/departments/` seguono `D<ordine>-<nome>.svg`, con nome
+  minuscolo e senza numeri finali. Usa `numberedAsset()` invece di scrivere il
+  filename completo nei contenuti.
+- Pagine e contenuti seguono l'ordine del menu: `1` Projects, `2` Results, `3`
+  Team, `4` Join Us, `5` Sponsors, `6` About. La Home è `0`; il dettaglio Team
+  condivide `P3` con la pagina Team; `C7-LAYOUT.ts` contiene menu e footer.
 - Per Results non pubblicare annate con risultato mancante o indicato con `?`:
   lasciale in `PUNTI_IN_SOSPESO.md` fino alla conferma editoriale.
 
@@ -39,7 +47,7 @@
 
 ## Recruiting
 
-- I dati della pagina Join Us sono in `content/joinus.ts`.
+- I dati della pagina Join Us sono in `content/C4-JOIN-US.ts`.
 - Lo stato diventa automaticamente aperto alla data `stato.aperturaIso`.
 - Alla chiusura imposta `stato.chiuseManualmente` su `true`.
 - Il pulsante di candidatura appare soltanto con candidature aperte e un URL

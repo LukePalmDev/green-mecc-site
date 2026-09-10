@@ -1,5 +1,5 @@
 import { asset } from '../utils/asset';
-import { PARTNERS } from './sponsors';
+import { PARTNERS } from './C5-SPONSORS';
 
 export const HOME_CONTENT = {
   titoloPrimaRiga: "GREEN",

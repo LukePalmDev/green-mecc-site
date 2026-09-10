@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { DEPARTMENTS_INFO, TEAM_CONTENT, TEAM_STRUCTURE } from '../content/team';
+import { DEPARTMENTS_INFO, TEAM_CONTENT, TEAM_STRUCTURE } from '../content/C3-TEAM';
 import { Reveal } from '../components/ui/Reveal';
 import Transition from '../components/Transition';
 import { motion } from 'framer-motion';
@@ -58,7 +58,7 @@ const TeamGroup: React.FC = () => {
           {/* Header */}
           <div className="mb-20">
             <Reveal>
-              <h1 className="font-display font-black text-6xl md:text-9xl text-stone-900 dark:text-white mb-2">
+              <h1 className="font-display font-black text-[clamp(2.35rem,8vw,7rem)] leading-[0.9] [overflow-wrap:anywhere] text-stone-900 dark:text-white mb-4">
                 {department.title.toUpperCase()}
               </h1>
             </Reveal>

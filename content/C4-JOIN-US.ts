@@ -32,8 +32,7 @@ export const JOINUS_CONTENT = {
       "Applications are currently closed. Follow our social channels to hear about the next recruiting round.",
     cta: {
       testo: "Apply now",
-      // Il pulsante resta nascosto finche' non viene fornito il form ufficiale.
-      url: "#",
+      url: "https://docs.google.com/forms/d/e/1FAIpQLSerlrSWv7ycqKrxaic_4tU0mHX6ANEEEv98-ioq30xWqMMa0A/viewform",
     },
   },
 

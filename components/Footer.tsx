@@ -1,7 +1,7 @@
 import React from 'react';
 import { Mail, MapPin, Instagram, Facebook, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
-import { FOOTER_CONTENT } from '../content/layout';
+import { FOOTER_CONTENT } from '../content/C7-LAYOUT';
 
 const Footer: React.FC = () => {
   const { theme, toggleTheme } = useTheme();

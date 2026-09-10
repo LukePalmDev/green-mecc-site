@@ -3,14 +3,14 @@ import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-d
 import { ThemeProvider } from './contexts/ThemeContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Team from './pages/Team';
-import Projects from './pages/Projects';
-import Results from './pages/Results';
-import TeamGroup from './pages/TeamGroup';
-import Sponsors from './pages/Sponsors';
-import JoinUs from './pages/JoinUs';
+import Home from './pages/P0-HOME';
+import Projects from './pages/P1-PROJECTS';
+import Results from './pages/P2-RESULTS';
+import Team from './pages/P3-TEAM';
+import TeamGroup from './pages/P3-TEAM-GROUP';
+import JoinUs from './pages/P4-JOIN-US';
+import Sponsors from './pages/P5-SPONSORS';
+import About from './pages/P6-ABOUT';
 import { motion, AnimatePresence } from 'framer-motion';
 import Lenis from 'lenis';
 
@@ -141,13 +141,13 @@ const AnimatedRoutes = () => {
             <React.Fragment key={location.pathname}>
                 <Routes location={location}>
                     <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/team" element={<Team />} />
-                    <Route path="/team/:groupId" element={<TeamGroup />} />
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/results" element={<Results />} />
+                    <Route path="/team" element={<Team />} />
+                    <Route path="/team/:groupId" element={<TeamGroup />} />
                     <Route path="/join-us" element={<JoinUs />} />
                     <Route path="/sponsors" element={<Sponsors />} />
+                    <Route path="/about" element={<About />} />
                 </Routes>
             </React.Fragment>
         </AnimatePresence>

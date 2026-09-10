@@ -1,5 +1,5 @@
 import React from 'react';
-import { PARTNERS, SPONSORS_CONTENT } from '../content/sponsors';
+import { PARTNERS, SPONSORS_CONTENT } from '../content/C5-SPONSORS';
 import { Reveal } from '../components/ui/Reveal';
 import Transition from '../components/Transition';
 
