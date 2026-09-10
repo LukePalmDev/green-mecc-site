@@ -21,21 +21,38 @@ const Sponsors: React.FC = () => {
       {/* Sponsors Grid */}
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
-          {PARTNERS.map((partner, index) => (
-            <a
-              key={index}
-              href={partner.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-center p-8 rounded-2xl border border-stone-200 dark:border-white/10 hover:border-emerald-900/40 hover:bg-stone-50 dark:hover:bg-white/[0.03] transition-all duration-300 aspect-square"
-            >
+          {PARTNERS.map((partner) => {
+            const cardClassName = `group flex items-center justify-center p-8 rounded-2xl border hover:border-emerald-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 aspect-square ${
+              partner.surface === 'dark'
+                ? 'bg-stone-900 border-stone-700'
+                : 'bg-white border-stone-200'
+            }`;
+            const logo = (
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="max-w-full max-h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                loading="lazy"
+                className="max-w-full max-h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
               />
-            </a>
-          ))}
+            );
+
+            return partner.url ? (
+              <a
+                key={partner.name}
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${partner.name} — sito ufficiale`}
+                className={cardClassName}
+              >
+                {logo}
+              </a>
+            ) : (
+              <div key={partner.name} className={cardClassName}>
+                {logo}
+              </div>
+            );
+          })}
         </div>
       </div>
 

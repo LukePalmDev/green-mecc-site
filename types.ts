@@ -34,5 +34,6 @@ export interface Result {
 export interface Partner {
   name: string;
   logo: string;
-  url: string;
+  url?: string;
+  surface?: 'light' | 'dark';
 }
