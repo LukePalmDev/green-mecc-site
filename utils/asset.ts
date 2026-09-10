@@ -11,9 +11,12 @@ const normalizeAssetName = (
   const withoutAccents = name
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '');
+  const unsupportedCharacters = stripNumbers
+    ? /[^a-zA-Z]+/g
+    : /[^a-zA-Z0-9]+/g;
   const normalized = (stripNumbers ? withoutAccents.replace(/\d+/g, '') : withoutAccents)
     .replace(/[.'’]/g, '')
-    .replace(/[^a-zA-Z]+/g, '-')
+    .replace(unsupportedCharacters, '-')
     .replace(/^-|-$/g, '');
 
   return nameCase === 'lower' ? normalized.toLowerCase() : normalized.toUpperCase();
