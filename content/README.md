@@ -25,3 +25,18 @@ titolo: "CHI SIAMO",
 ```
 
 Non cancellare virgole, parentesi o nomi prima dei due punti.
+
+## Testi su piu paragrafi
+
+Alcuni testi sono scritti tra parentesi quadre, come elenco. Ogni riga tra
+virgolette diventa un paragrafo separato sulla pagina:
+
+```ts
+description: [
+  "Primo paragrafo.",
+  "Secondo paragrafo.",
+],
+```
+
+Per aggiungere un paragrafo, copia una riga e cambiane il testo, tenendo la
+virgola finale.

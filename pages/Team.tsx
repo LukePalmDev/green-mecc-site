@@ -46,10 +46,12 @@ const Team: React.FC = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Text Side */}
                 <ul className="space-y-3 text-stone-600 dark:text-gray-300 text-sm sm:text-base md:text-lg font-light">
-                  <li className="flex items-start gap-3 w-full">
-                    <span className="mt-2 w-2 h-2 rounded-full bg-emerald-900 flex-shrink-0" />
-                    <span className="break-words flex-1 leading-relaxed text-left">{dept.description}</span>
-                  </li>
+                  {dept.description.map((paragrafo, i) => (
+                    <li key={i} className="flex items-start gap-3 w-full">
+                      <span className="mt-2 w-2 h-2 rounded-full bg-emerald-900 flex-shrink-0" />
+                      <span className="break-words flex-1 leading-relaxed text-left">{paragrafo}</span>
+                    </li>
+                  ))}
                 </ul>
 
                 {/* Image Side */}

@@ -13,9 +13,14 @@ const About: React.FC = () => {
         <Reveal>
           <h1 className="font-display font-black text-6xl md:text-9xl text-stone-900 dark:text-white mb-2">{ABOUT_CONTENT.titolo}</h1>
         </Reveal>
-        <p className="text-xl text-emerald-900 font-mono border-l-4 border-emerald-900 pl-4 max-w-xl">
-          {ABOUT_CONTENT.descrizione}
-        </p>
+        <div className="border-l-4 border-emerald-900 pl-4 max-w-xl">
+          <p className="text-2xl md:text-3xl font-display font-bold text-stone-900 dark:text-white mb-4">
+            {ABOUT_CONTENT.claim}
+          </p>
+          <p className="text-xl text-emerald-900 font-mono">
+            {ABOUT_CONTENT.descrizione}
+          </p>
+        </div>
       </div>
 
       {/* --- OUR MISSION SECTION --- */}

@@ -62,9 +62,17 @@ const TeamGroup: React.FC = () => {
                 {department.title.toUpperCase()}
               </h1>
             </Reveal>
+            {/* Primo capoverso come occhiello, gli eventuali successivi nel corpo */}
             <p className="text-xl text-emerald-900 font-mono border-l-4 border-emerald-900 pl-4 max-w-xl">
-              {department.description}
+              {department.description[0]}
             </p>
+            {department.description.length > 1 && (
+              <div className="mt-8 max-w-3xl space-y-4 text-stone-600 dark:text-gray-300 text-base md:text-lg font-light leading-relaxed">
+                {department.description.slice(1).map((paragrafo, i) => (
+                  <p key={i}>{paragrafo}</p>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Members Grid — split capi reparto e altri */}
