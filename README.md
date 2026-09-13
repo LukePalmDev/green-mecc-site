@@ -47,8 +47,10 @@ versionati: si conservano su OneDrive e possono essere lavorati localmente in
 `assets-source/INBOX/`. Nel repository restano solo le versioni WebP ottimizzate.
 
 La pagina recruiting è raggiungibile all'hash route `#/join-us`. La sua data di
-apertura, le fasi, le FAQ e il futuro link di candidatura sono in
-`content/C4-JOIN-US.ts`.
+apertura, le fasi, le FAQ e il link di candidatura sono in
+`content/C4-JOIN-US.ts`. I pulsanti sono sempre visibili: prima dell'apertura e
+dopo la chiusura portano a `#/join-us/applications-closed`; durante il recruiting
+portano direttamente al form esterno.
 
 ## Convenzione dei nomi
 

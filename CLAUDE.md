@@ -59,5 +59,6 @@
 - I dati della pagina Join Us sono in `content/C4-JOIN-US.ts`.
 - Lo stato diventa automaticamente aperto alla data `stato.aperturaIso`.
 - Alla chiusura imposta `stato.chiuseManualmente` su `true`.
-- Il pulsante di candidatura appare soltanto con candidature aperte e un URL
-  diverso da `#`.
+- Il pulsante di candidatura è sempre visibile. Prima dell'apertura e dopo la
+  chiusura porta a `#/join-us/applications-closed`; con candidature aperte e un
+  URL diverso da `#` porta direttamente al form esterno.

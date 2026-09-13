@@ -67,6 +67,8 @@ di selezione e le FAQ. Lo stato passa automaticamente ad "Applications open"
 alla data indicata in `aperturaIso`. Alla chiusura, imposta
 `chiuseManualmente` su `true`.
 
-Il pulsante "Apply now" compare solo se le candidature sono aperte e
-`stato.cta.url` contiene un link valido. Le informazioni ancora da confermare
-sono elencate in `PUNTI_IN_SOSPESO.md` nella radice del progetto.
+Il pulsante "Apply now" è sempre visibile. Prima dell'apertura e dopo la
+chiusura porta alla pagina informativa interna; dalla data `aperturaIso`, se
+`stato.cta.url` contiene un link valido, porta direttamente al form. Le
+informazioni ancora da confermare sono elencate in `PUNTI_IN_SOSPESO.md` nella
+radice del progetto.

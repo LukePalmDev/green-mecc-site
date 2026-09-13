@@ -6,16 +6,52 @@ import { DEPARTMENTS_INFO } from '../content/C3-TEAM';
 import { Reveal } from '../components/ui/Reveal';
 import { Accordion } from '../components/ui/Accordion';
 import Transition from '../components/Transition';
+import { getRecruitingState } from '../utils/recruiting';
+
+type ApplicationButtonProps = {
+  href: string;
+  external: boolean;
+  label: string;
+  className: string;
+};
+
+const ApplicationButton: React.FC<ApplicationButtonProps> = ({
+  href,
+  external,
+  label,
+  className,
+}) => {
+  const content = (
+    <>
+      {label}
+      <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+    </>
+  );
+
+  return external ? (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={className}
+    >
+      {content}
+    </a>
+  ) : (
+    <Link to={href} className={className}>
+      {content}
+    </Link>
+  );
+};
 
 const JoinUs: React.FC = () => {
   const { titolo, occhiello, intro, stato, fasi, reparti, ctaFinale, faq } = JOINUS_CONTENT;
 
-  const candidatureAperte =
-    !stato.chiuseManualmente && Date.now() >= Date.parse(stato.aperturaIso);
-  const candidatureInArrivo =
-    !stato.chiuseManualmente && !candidatureAperte;
-  const linkCandidaturaPronto = stato.cta.url.trim() !== '' && stato.cta.url.trim() !== '#';
-  const mostraCta = candidatureAperte && linkCandidaturaPronto;
+  const {
+    isOpen: candidatureAperte,
+    isUpcoming: candidatureInArrivo,
+    applicationTarget,
+  } = getRecruitingState(stato);
   const etichettaStato = candidatureInArrivo
     ? stato.etichettaInArrivo
     : candidatureAperte
@@ -82,19 +118,14 @@ const JoinUs: React.FC = () => {
                 </p>
               </div>
 
-              {mostraCta && (
-                <div className="flex-shrink-0">
-                  <a
-                    href={stato.cta.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-3 bg-emerald-900 text-white px-8 py-4 rounded-full font-mono text-sm uppercase tracking-widest hover:bg-emerald-800 transition-colors"
-                  >
-                    {stato.cta.testo}
-                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </div>
-              )}
+              <div className="flex-shrink-0">
+                <ApplicationButton
+                  href={applicationTarget.href}
+                  external={applicationTarget.external}
+                  label={stato.cta.testo}
+                  className="group inline-flex items-center gap-3 bg-emerald-900 text-white px-8 py-4 rounded-full font-mono text-sm uppercase tracking-widest hover:bg-emerald-800 transition-colors"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -191,17 +222,12 @@ const JoinUs: React.FC = () => {
               {ctaFinale.testo}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              {mostraCta && (
-                <a
-                  href={stato.cta.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-3 bg-white text-emerald-900 px-8 py-4 rounded-full font-mono text-sm uppercase tracking-widest hover:bg-stone-100 transition-colors"
-                >
-                  {ctaFinale.bottonePrimario}
-                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                </a>
-              )}
+              <ApplicationButton
+                href={applicationTarget.href}
+                external={applicationTarget.external}
+                label={ctaFinale.bottonePrimario}
+                className="group inline-flex items-center gap-3 bg-white text-emerald-900 px-8 py-4 rounded-full font-mono text-sm uppercase tracking-widest hover:bg-stone-100 transition-colors"
+              />
               <Link
                 to="/team"
                 className="group inline-flex items-center gap-3 border border-white/40 text-white px-8 py-4 rounded-full font-mono text-sm uppercase tracking-widest hover:bg-white/10 hover:border-white transition-colors"

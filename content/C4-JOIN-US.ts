@@ -34,6 +34,16 @@ export const JOINUS_CONTENT = {
       testo: "Apply now",
       url: "https://docs.google.com/forms/d/e/1FAIpQLSerlrSWv7ycqKrxaic_4tU0mHX6ANEEEv98-ioq30xWqMMa0A/viewform",
     },
+    paginaChiusa: {
+      titolo: "APPLICATIONS CLOSED",
+      testoInArrivo:
+        "Applications are currently closed. Recruiting opens on 14 September.",
+      testoChiuse:
+        "Applications are currently closed. Follow our social channels to hear about the next recruiting round.",
+      notaInArrivo:
+        "From 14 September, the Apply now buttons will take you directly to the application form.",
+      bottoneIndietro: "Back to Join Us",
+    },
   },
 
   // ---------------------------------------------------------------------------

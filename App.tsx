@@ -9,6 +9,7 @@ import Results from './pages/P2-RESULTS';
 import Team from './pages/P3-TEAM';
 import TeamGroup from './pages/P3-TEAM-GROUP';
 import JoinUs from './pages/P4-JOIN-US';
+import ApplicationsClosed from './pages/P4-APPLICATIONS-CLOSED';
 import Sponsors from './pages/P5-SPONSORS';
 import About from './pages/P6-ABOUT';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -146,6 +147,7 @@ const AnimatedRoutes = () => {
                     <Route path="/team" element={<Team />} />
                     <Route path="/team/:groupId" element={<TeamGroup />} />
                     <Route path="/join-us" element={<JoinUs />} />
+                    <Route path="/join-us/applications-closed" element={<ApplicationsClosed />} />
                     <Route path="/sponsors" element={<Sponsors />} />
                     <Route path="/about" element={<About />} />
                 </Routes>
