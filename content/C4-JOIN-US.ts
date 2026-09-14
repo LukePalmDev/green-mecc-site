@@ -12,13 +12,14 @@ export const JOINUS_CONTENT = {
 
   // ---------------------------------------------------------------------------
   // STATO DELLE CANDIDATURE
-  // Metti `aperte: false` quando il recruiting e' chiuso: la pagina mostra
-  // automaticamente il messaggio di chiusura al posto del pulsante.
+  // Imposta `chiuseManualmente: true` quando il recruiting e' chiuso.
+  // Il pulsante resta visibile e porta alla pagina informativa di chiusura.
   // ---------------------------------------------------------------------------
   stato: {
     // Il sito passa automaticamente da "in apertura" ad "aperte" a questa data.
     // Impostare `chiuseManualmente: true` alla chiusura del recruiting.
     aperturaIso: "2026-09-14T00:00:00+02:00",
+    aperteManualmente: true,
     chiuseManualmente: false,
     titoloSezione: "Application status",
     etichettaInArrivo: "Applications open on 14 September",
@@ -104,9 +105,9 @@ export const JOINUS_CONTENT = {
           "No previous experience is required. What matters most is curiosity, commitment and a willingness to learn and get involved. Relevant skills or previous experience are always welcome, but they are not essential.",
       },
       {
-        domanda: "When does the next recruiting round open?",
+        domanda: "Are applications open?",
         risposta:
-          "Applications for the next recruiting round will open on 14 September. Stay tuned to our website and social media channels for further information.",
+          "Applications are open now. Use the Apply now buttons on this page to access the application form.",
       },
       {
         domanda: "How does the selection process work?",

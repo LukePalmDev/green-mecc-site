@@ -57,7 +57,8 @@
 ## Recruiting
 
 - I dati della pagina Join Us sono in `content/C4-JOIN-US.ts`.
-- Lo stato diventa automaticamente aperto alla data `stato.aperturaIso`.
+- Lo stato diventa automaticamente aperto alla data `stato.aperturaIso`, oppure
+  subito con `stato.aperteManualmente: true` (attualmente attivo).
 - Alla chiusura imposta `stato.chiuseManualmente` su `true`.
 - Il pulsante di candidatura è sempre visibile. Prima dell'apertura e dopo la
   chiusura porta a `#/join-us/applications-closed`; con candidature aperte e un

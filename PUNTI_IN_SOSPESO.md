@@ -1,14 +1,14 @@
 # Punti in sospeso
 
-Aggiornato il 10 settembre 2026.
+Aggiornato il 14 settembre 2026.
 
 ## Recruiting
 
 - Verificare che l'accesso Google obbligatorio al form di candidatura sia
   voluto. Il collegamento è inserito, ma per un visitatore non autenticato il
   form reindirizza oggi alla schermata di login Google.
-- Fornire la data di chiusura del recruiting. Per ora il sito apre
-  automaticamente le candidature il 14 settembre 2026 e resta aperto finché
+- Fornire la data di chiusura del recruiting. Le candidature sono
+  aperte manualmente da subito e restano aperte finché
   `chiuseManualmente` non viene impostato su `true`.
 - Facoltativo: aggiungere orario, luogo e argomenti del test scritto, se si
   desidera pubblicarli.
@@ -18,9 +18,8 @@ Aggiornato il 10 settembre 2026.
 - Fornire la copertina definitiva del reparto Logistics & PR. Aerodynamics usa
   ora la nuova fotografia ricevuta; Logistics & PR mantiene temporaneamente la
   precedente fotografia di gruppo.
-- Confermare se Irene Marchetti debba essere indicata come Team Leader o con un
-  altro ruolo: nel materiale ricevuto il suo file non contiene l'indicazione
-  “capo”, quindi il sito la mostra senza ruolo.
+- Attendere le eventuali una o due nuove foto Team e l'indicazione delle foto
+  da sostituire. Irene Marchetti è confermata come Team Leader.
 
 ## Results
 

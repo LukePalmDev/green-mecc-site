@@ -6,7 +6,7 @@ seguono l'ordine del menu; `C0` è riservato alla Home.
 - `C0-HOME.ts`: testi della Home.
 - `C1-PROJECTS.ts`: testi e schede dei veicoli.
 - `C2-RESULTS.ts`: testi e risultati. Inserire solo risultati completi.
-- `C3-TEAM.ts`: testi della pagina Team, reparti, membri, ruoli e Albo. Le foto
+- `C3-TEAM.ts`: testi della pagina Team, reparti, membri e ruoli. Le foto
   collegate sono in `public/team/`.
 - `C4-JOIN-US.ts`: recruiting, fasi di selezione e FAQ.
 - `C5-SPONSORS.ts`: sponsor, loghi, link opzionali e tipo di sfondo del logo.
@@ -64,11 +64,13 @@ virgola finale.
 
 Il file `C4-JOIN-US.ts` contiene la data di apertura del recruiting, le due fasi
 di selezione e le FAQ. Lo stato passa automaticamente ad "Applications open"
-alla data indicata in `aperturaIso`. Alla chiusura, imposta
+alla data indicata in `aperturaIso`, oppure immediatamente impostando
+`aperteManualmente: true` (stato attuale). Alla chiusura, imposta
 `chiuseManualmente` su `true`.
 
 Il pulsante "Apply now" è sempre visibile. Prima dell'apertura e dopo la
-chiusura porta alla pagina informativa interna; dalla data `aperturaIso`, se
+chiusura porta alla pagina informativa interna; con apertura manuale o dalla
+data `aperturaIso`, se
 `stato.cta.url` contiene un link valido, porta direttamente al form. Le
 informazioni ancora da confermare sono elencate in `PUNTI_IN_SOSPESO.md` nella
 radice del progetto.

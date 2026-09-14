@@ -29,20 +29,14 @@ export const TEAM_CONTENT = {
     "We are a multidisciplinary group of students from Politecnico di Milano, united by the passion for innovation and sustainability.",
   testoGruppoNonTrovato: "Group not found.",
   linkTornaAlTeam: "Back to Team",
+  etichettaTeamLeader: "Team Leader",
   etichettaCapoReparto: "Capo Reparto",
   etichettaMembri: "Membri",
   testoMembriInArrivo: "Members information coming soon.",
-  albo: {
-    titolo: "ALBO",
-    testo:
-      "L'Albo raccoglie tutti gli ex studenti del Politecnico di Milano che, nel corso degli anni, hanno contribuito alla crescita e ai successi di Green Mecc. Il loro impegno, la loro passione e le competenze acquisite durante il percorso nel team hanno reso possibile i traguardi raggiunti. Essere parte di questa realtà significa entrare a far parte di una comunità che continua a crescere e a ispirare le generazioni future di ingegneri.",
-    immagine: numberedAsset("general", "G", 1, "Albo"),
-    testoAlternativoImmagine: "Albo Green Mecc",
-  },
   rimandoJoinUs: {
     titolo: "JOIN US",
     testo:
-      "Recruiting opens on 14 September. Find out how the selection works and which department fits you best.",
+      "Recruiting is open. Find out how the selection works and which department fits you best.",
     link: "Go to Join Us",
   },
 };
@@ -57,7 +51,7 @@ export const DEPARTMENTS_INFO = [
       "The main task is to manage and coordinate the work of all team members. Every year, the seasonal objectives are established, and the team is formed. Experience gained over many seasons is the basis for success.",
     ],
     members: membersWithImages("management", [
-      { name: "Irene", surname: "Marchetti" },
+      { name: "Irene", surname: "Marchetti", role: "Team Leader" },
     ]),
   },
   {

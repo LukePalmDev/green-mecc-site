@@ -63,8 +63,11 @@ const TeamGroup: React.FC = () => {
 
           {/* Members Grid — split capi reparto e altri */}
           {department.members.length > 0 ? (() => {
-            const capi = department.members.filter(m => m.role === 'Capo Reparto');
-            const altri = department.members.filter(m => m.role !== 'Capo Reparto');
+            const ruoloResponsabile = department.id === 'management'
+              ? TEAM_CONTENT.etichettaTeamLeader
+              : TEAM_CONTENT.etichettaCapoReparto;
+            const capi = department.members.filter(m => m.role === ruoloResponsabile);
+            const altri = department.members.filter(m => m.role !== ruoloResponsabile);
             const renderCard = (member: TeamMember) => (
               <motion.div
                 key={`${member.name}-${member.surname}`}
@@ -102,7 +105,7 @@ const TeamGroup: React.FC = () => {
                 <div className="p-4 border-t border-stone-300 dark:border-white/10">
                   <h4 className="font-display font-bold text-lg text-stone-900 dark:text-white uppercase">{member.surname}</h4>
                   <p className="text-stone-600 dark:text-gray-400 font-light">{member.name}</p>
-                  {member.role && member.role !== 'Capo Reparto' && (
+                  {member.role && member.role !== ruoloResponsabile && (
                     <p className="text-emerald-900 text-xs uppercase tracking-widest mt-2 font-bold">{member.role}</p>
                   )}
                 </div>
@@ -113,7 +116,7 @@ const TeamGroup: React.FC = () => {
                 {capi.length > 0 && (
                   <div className="mb-12">
                     <p className="text-emerald-900 font-mono text-xs uppercase tracking-[0.3em] mb-6 border-b border-emerald-900/20 pb-3">
-                      {TEAM_CONTENT.etichettaCapoReparto}
+                      {ruoloResponsabile}
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                       {capi.map(renderCard)}

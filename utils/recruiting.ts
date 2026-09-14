@@ -2,6 +2,7 @@ export const APPLICATIONS_CLOSED_ROUTE = '/join-us/applications-closed';
 
 type RecruitingStatus = {
   aperturaIso: string;
+  aperteManualmente?: boolean;
   chiuseManualmente: boolean;
   cta: {
     url: string;
@@ -16,7 +17,7 @@ export const getRecruitingState = (
   const hasApplicationForm =
     stato.cta.url.trim() !== '' && stato.cta.url.trim() !== '#';
   const isOpen =
-    !stato.chiuseManualmente && now >= openingTime;
+    !stato.chiuseManualmente && (stato.aperteManualmente === true || now >= openingTime);
 
   return {
     openingTime,

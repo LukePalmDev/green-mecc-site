@@ -17,14 +17,14 @@ const ApplicationsClosed: React.FC = () => {
     const redirectToForm = () => window.location.replace(stato.cta.url);
     const delay = recruiting.openingTime - Date.now();
 
-    if (delay <= 0) {
+    if (recruiting.isOpen) {
       redirectToForm();
       return;
     }
 
     const timeout = window.setTimeout(redirectToForm, delay);
     return () => window.clearTimeout(timeout);
-  }, [recruiting.hasApplicationForm, recruiting.openingTime, stato.chiuseManualmente, stato.cta.url]);
+  }, [recruiting.hasApplicationForm, recruiting.isOpen, recruiting.openingTime, stato.chiuseManualmente, stato.cta.url]);
 
   const message = recruiting.isUpcoming
     ? stato.paginaChiusa.testoInArrivo

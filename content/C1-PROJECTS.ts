@@ -5,7 +5,7 @@ const vehicleImage = (order: number, name: string) =>
   numberedAsset('vehicles', 'V', order, name);
 
 export const PROJECTS_CONTENT = {
-  titolo: "PROJECT",
+  titolo: "PROJECTS",
 };
 
 export const VEHICLES: Vehicle[] = [
@@ -15,7 +15,10 @@ export const VEHICLES: Vehicle[] = [
     year: "2026",
     image: vehicleImage(7, "Eros"),
     description: [
-      "Urban Concept battery electric vehicle developed for the 2026 season.",
+      "Battery electric Urban Concept vehicle",
+      "Lightweight composite monocoque optimized for minimum mass and maximum stiffness",
+      "Aerodynamically optimized body incorporating vortex generators",
+      "Electric powertrain (PMSM) optimized for vehicle's operating conditions",
     ],
   },
   {
